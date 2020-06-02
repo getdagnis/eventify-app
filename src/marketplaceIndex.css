@@ -118,9 +118,9 @@ textarea {
 
 :global(.fontsLoaded) {
   & body {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'sofiapro', Helvetica, Arial, sans-serif;
   }
   & button {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'sofiapro', Helvetica, Arial, sans-serif;
   }
 }

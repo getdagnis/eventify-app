@@ -63,17 +63,17 @@ const stripeErrorTranslation = (intl, stripeError) => {
 const stripeElementsOptions = {
   fonts: [
     {
-      family: 'Open Sans',
+      family: 'sofiapro',
       fontSmoothing: 'antialiased',
       src:
-        'local("Open Sans"), local("Open Sans"), local("Sofia Pro"), url("https://assets-sharetribecom.sharetribe.com/webfonts/Open Sans/Open Sans-medium-webfont.woff2") format("woff2")',
+        'local("sofiapro"), local("sofiapro"), local("Sofia Pro"), url("https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-medium-webfont.woff2") format("woff2")',
     },
   ],
 };
 
 const cardStyles = {
   base: {
-    fontFamily: '"Open Sans", Helvetica, Arial, sans-serif',
+    fontFamily: '"sofiapro", Helvetica, Arial, sans-serif',
     fontSize: '18px',
     fontSmoothing: 'antialiased',
     lineHeight: '24px',
