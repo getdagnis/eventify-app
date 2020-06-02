@@ -32,42 +32,42 @@
       */
 
       @font-face {
-        /* 'SofiaPro-Regular' */
-        font-family: 'sofiapro';
-        src: url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-regular-webfont.woff2') format('woff2'),
-             url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-regular-webfont.woff') format('woff');
+        /* 'Open Sans-Regular' */
+        font-family: 'Open Sans';
+        src: url('https://assets-sharetribecom.sharetribe.com/webfonts/Open Sans/Open Sans-regular-webfont.woff2') format('woff2'),
+             url('https://assets-sharetribecom.sharetribe.com/webfonts/Open Sans/Open Sans-regular-webfont.woff') format('woff');
         font-weight: 400; /* Regular */
         font-style: normal;
       }
 
       @font-face {
-          font-family: 'sofiapro';
-          src: url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-medium-webfont.woff2') format('woff2'),
-               url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-medium-webfont.woff') format('woff');
+          font-family: 'Open Sans';
+          src: url('https://assets-sharetribecom.sharetribe.com/webfonts/Open Sans/Open Sans-medium-webfont.woff2') format('woff2'),
+               url('https://assets-sharetribecom.sharetribe.com/webfonts/Open Sans/Open Sans-medium-webfont.woff') format('woff');
           font-weight: 500; /* Medium */
           font-style: normal;
       }
 
       @font-face {
-          font-family: 'sofiapro';
-          src: url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-mediumit-webfont.woff2') format('woff2'),
-               url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-mediumit-webfont.woff') format('woff');
+          font-family: 'Open Sans';
+          src: url('https://assets-sharetribecom.sharetribe.com/webfonts/Open Sans/Open Sans-mediumit-webfont.woff2') format('woff2'),
+               url('https://assets-sharetribecom.sharetribe.com/webfonts/Open Sans/Open Sans-mediumit-webfont.woff') format('woff');
           font-weight: 500; /* Medium italics */
           font-style: italic;
       }
 
       @font-face {
-          font-family: 'sofiapro';
-          src: url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-semibold-webfont.woff2') format('woff2'),
-               url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-semibold-webfont.woff') format('woff');
+          font-family: 'Open Sans';
+          src: url('https://assets-sharetribecom.sharetribe.com/webfonts/Open Sans/Open Sans-semibold-webfont.woff2') format('woff2'),
+               url('https://assets-sharetribecom.sharetribe.com/webfonts/Open Sans/Open Sans-semibold-webfont.woff') format('woff');
           font-weight: 600; /* SemiBold */
           font-style: normal;
       }
 
       @font-face {
-          font-family: 'sofiapro';
-          src: url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-bold-webfont.woff2') format('woff2'),
-               url('https://assets-sharetribecom.sharetribe.com/webfonts/sofiapro/sofiapro-bold-webfont.woff') format('woff');
+          font-family: 'Open Sans';
+          src: url('https://assets-sharetribecom.sharetribe.com/webfonts/Open Sans/Open Sans-bold-webfont.woff2') format('woff2'),
+               url('https://assets-sharetribecom.sharetribe.com/webfonts/Open Sans/Open Sans-bold-webfont.woff') format('woff');
           font-weight: 700; /* Bold */
           font-style: normal;
       }
@@ -118,18 +118,18 @@
 
 
         // Fonts we use (Check font-face rules from <style> tag in <head> section)
-        var sofiaproRegular = new FontFaceObserver('sofiapro', { weight: 400 });
-        var sofiaproMedium = new FontFaceObserver('sofiapro', { weight: 500 });
-        var sofiaproSemibold = new FontFaceObserver('sofiapro', { weight: 600 });
-        var sofiaproBold = new FontFaceObserver('sofiapro', { weight: 700 });
+        var Open SansRegular = new FontFaceObserver('Open Sans', { weight: 400 });
+        var Open SansMedium = new FontFaceObserver('Open Sans', { weight: 500 });
+        var Open SansSemibold = new FontFaceObserver('Open Sans', { weight: 600 });
+        var Open SansBold = new FontFaceObserver('Open Sans', { weight: 700 });
 
         var fontLoadingTimeout = 5000;
 
         Promise.all([
-          sofiaproRegular.load(null, fontLoadingTimeout),
-          sofiaproMedium.load(null, fontLoadingTimeout),
-          sofiaproSemibold.load(null, fontLoadingTimeout),
-          sofiaproBold.load(null, fontLoadingTimeout)
+          Open SansRegular.load(null, fontLoadingTimeout),
+          Open SansMedium.load(null, fontLoadingTimeout),
+          Open SansSemibold.load(null, fontLoadingTimeout),
+          Open SansBold.load(null, fontLoadingTimeout)
         ])
           .then(function () {
             document.documentElement.classList.add("fontsLoaded");
