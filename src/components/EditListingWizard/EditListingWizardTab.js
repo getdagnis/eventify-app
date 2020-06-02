@@ -22,6 +22,7 @@ import {
 import css from './EditListingWizard.css';
 
 export const AVAILABILITY = 'availability';
+export const CATHEGORY = 'cathegory';
 export const DESCRIPTION = 'description';
 export const FEATURES = 'features';
 export const POLICY = 'policy';
