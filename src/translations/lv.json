@@ -363,7 +363,7 @@
   "LocationAutocompleteInput.currentLocation": "Current location",
   "LocationSearchForm.placeholder": "Meklē piedāvājumos…",
   "LoginForm.emailInvalid": "Nepieciešama derīga e-pasta adrese",
-  "LoginForm.emailLabel": "E-pasts",
+  "LoginForm.emailLabel": "Tavs e-pasts",
   "LoginForm.emailPlaceholder": "vards.uzvards@adrese.lv",
   "LoginForm.emailRequired": "Šo lauciņu ir nepieciešams aizpildīt",
   "LoginForm.forgotPassword": "Atjauno paroli",
