@@ -11,17 +11,15 @@
     since browsers support CSS Properties already.
  */
 
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-
   --fontWeightRegular: 400;
-  --fontWeightMedium: 600;
-  --fontWeightSemiBold: 700;
+  --fontWeightMedium: 500;
+  --fontWeightSemiBold: 600;
   --fontWeightBold: 700;
 
   /* ================ Default font ================ */
 
   --marketplaceDefaultFontStyles: {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'sofiapro', Helvetica, Arial, sans-serif;
     font-weight: var(--fontWeightMedium);
     font-size: 18px;
     line-height: 24px;
@@ -35,7 +33,7 @@
   }
 
   --marketplaceSmallFontStyles: {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'sofiapro', Helvetica, Arial, sans-serif;
     font-weight: var(--fontWeightMedium);
     font-size: 15px;
     line-height: 24px;
@@ -44,7 +42,7 @@
   /* ================ Body font ================ */
 
   --marketplaceBodyFontStyles: {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'sofiapro', Helvetica, Arial, sans-serif;
     font-weight: var(--fontWeightMedium);
     font-size: 18px;
     line-height: 24px;
@@ -217,7 +215,7 @@
   /* ================ Other fonts ================ */
 
   --marketplaceTinyFontStyles: {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'sofiapro', Helvetica, Arial, sans-serif;
     font-weight: var(--fontWeightRegular);
     font-size: 13px;
     line-height: 18px;
@@ -235,14 +233,14 @@
   }
 
   --marketplaceMessageFontStyles {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'sofiapro', Helvetica, Arial, sans-serif;
     font-weight: var(--fontWeightRegular);
     font-size: 16px;
     line-height: 24px;
   }
 
   --marketplaceMessageDateFontStyles {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'sofiapro', Helvetica, Arial, sans-serif;
     font-weight: var(--fontWeightRegular);
     font-size: 13px;
     line-height: 18px;
@@ -256,7 +254,7 @@
   }
 
   --marketplaceTxTransitionFontStyles {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'sofiapro', Helvetica, Arial, sans-serif;
     font-weight: var(--fontWeightMedium);
     font-size: 16px;
     line-height: 18px;
@@ -268,7 +266,7 @@
   }
 
   --marketplaceSearchFilterLabelFontStyles {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'sofiapro', Helvetica, Arial, sans-serif;
     font-weight: var(--fontWeightSemiBold);
     font-size: 13px;
     line-height: 18px;
@@ -281,14 +279,14 @@
   }
 
   --marketplaceSearchFilterSublabelFontStyles {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'sofiapro', Helvetica, Arial, sans-serif;
     font-weight: var(--fontWeightMedium);
     font-size: 18px;
     line-height: 18px;
   }
 
   --marketplaceListingAttributeFontStyles {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'sofiapro', Helvetica, Arial, sans-serif;
     font-weight: var(--fontWeightMedium);
     font-size: 18px;
     line-height: 32px;
