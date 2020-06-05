@@ -47,17 +47,17 @@ export const categories = [
   { key: 'mebeles', label: 'Mēbeles' },
   { key: 'gaismas', label: 'Gaismas objekti' },
   { key: 'profi', label: 'Profesionāļu serviss' },
-  { key: 'tehnika', label: 'Tehnika' },
+  { key: 'tehnika', label: 'Tehniskais aprīkojums' },
   { key: 'razotaji', label: 'Ražotāji un drukātāji' },
-  { key: 'telpas', label: 'Telpas' },
+  { key: 'telpas', label: 'Telpas un vietas' },
   { key: 'cita', label: 'Cita' },
 ];
 
-export const teltisSubcategory = [
-  { key: 'teltis-lielas', label: 'Lielas teltis' },
-  { key: 'teltis-mazas', label: 'Mazas teltis' },
-  { key: 'teltis-caurspidigas', label: 'Caurspīdīgas teltis' },
-  { key: 'teltis-nestandarta', label: 'Nestandarta nojumes' },
+export const teltisSubcategories = [
+  { key: 'teltis_lielas', label: 'Lielas teltis' },
+  { key: 'teltis_mazas', label: 'Mazas teltis' },
+  { key: 'teltis_caurspidigas', label: 'Caurspīdīgas teltis' },
+  { key: 'teltis_nestandarta', label: 'Nestandarta nojumes' },
 ];
 
 // Price filter configuration

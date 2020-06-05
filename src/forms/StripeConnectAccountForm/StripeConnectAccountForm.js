@@ -70,7 +70,7 @@ const CreateStripeAccountFields = props => {
     const defaultBusinessURL =
       hasCanonicalRootUrl && !rootUrl.includes('localhost')
         ? `${rootUrl}${pathToProfilePage(currentUserId.uuid)}`
-        : `https://test-marketplace.com${pathToProfilePage(currentUserId.uuid)}`;
+        : `https://eventify-initial.herokuapp.com`;
     form.change('businessProfileURL', defaultBusinessURL);
   }
 
