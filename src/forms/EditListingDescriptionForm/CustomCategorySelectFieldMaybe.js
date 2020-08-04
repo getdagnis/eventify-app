@@ -5,7 +5,7 @@ import { FieldSelect } from '../../components';
 import css from './EditListingDescriptionForm.css';
 
 const CustomCategorySelectFieldMaybe = props => {
-  const { name, id, categories, intl, changeHandle } = props;
+  const { name, id, categories, intl } = props;
   const categoryLabel = intl.formatMessage({
     id: 'EditListingDescriptionForm.categoryLabel',
   });
@@ -25,13 +25,12 @@ const CustomCategorySelectFieldMaybe = props => {
       id={id}
       label={categoryLabel} // Virsraksts virs kategorijas
       validate={categoryRequired}
-      onChange={changeHandle}
     >
       <option disabled value="">
         {props.selectedCategory}
       </option>
       {categories.map(c => (
-        <option key={c.key} value={c.key}>
+        <option key={c.key} value={c.id}>
           {c.name}
         </option>
       ))}

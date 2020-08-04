@@ -86,8 +86,13 @@ const EditListingDescriptionFormComponent = props => (
 
       const doThings = () => {
         console.log(formRenderProps.values)
+        console.log(eventifyCategories)
+        console.log(subCategories)
         if (formRenderProps.values.category) {
-          subCategories = [1, 2, 3]
+          const category = eventifyCategories.find((row) => row.id === formRenderProps.values.category)
+
+          console.log(category)
+          subCategories = !!category ? category.subcategories : [];
         }
       }
 
