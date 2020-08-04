@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { arrayOf, bool, func, shape, string } from 'prop-types';
 import { compose } from 'redux';
 import { Form as FinalForm } from 'react-final-form';
@@ -7,7 +7,9 @@ import classNames from 'classnames';
 import { propTypes } from '../../util/types';
 import { maxLength, required, composeValidators } from '../../util/validators';
 import { Form, Button, FieldTextInput } from '../../components';
-import CustomCategorySelectFieldMaybe from './CustomCategorySelectFieldMaybe';
+import SelectCategories from '../../components/EditListingSelectCategories/EditListingSelectCategories';
+import CustomCategorySelectFieldMaybe from '../../forms/EditListingDescriptionForm/CustomCategorySelectFieldMaybe';
+import { Categories as eventifyCategories } from '../../categories';
 
 import css from './EditListingDescriptionForm.css';
 
@@ -109,10 +111,10 @@ const EditListingDescriptionFormComponent = props => (
             validate={composeValidators(required(descriptionRequiredMessage))}
           />
 
-          <CustomCategorySelectFieldMaybe
+          <SelectCategories
             id="category"
             name="category"
-            categories={categories}
+            categories={eventifyCategories}
             intl={intl}
           />
 
