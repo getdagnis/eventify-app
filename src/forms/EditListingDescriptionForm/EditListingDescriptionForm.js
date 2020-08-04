@@ -84,6 +84,15 @@ const EditListingDescriptionFormComponent = props => (
       const submitInProgress = updateInProgress;
       const submitDisabled = invalid || disabled || submitInProgress;
 
+      const doThings = () => {
+        console.log(formRenderProps.values)
+        if (formRenderProps.values.category) {
+          subCategories = [1, 2, 3]
+        }
+      }
+
+      let subCategories = []
+
       return (
         <Form className={classes} onSubmit={handleSubmit}>
           {errorMessageCreateListingDraft}
@@ -116,7 +125,16 @@ const EditListingDescriptionFormComponent = props => (
             name="category"
             categories={eventifyCategories}
             intl={intl}
+            onChange={doThings()}
           />
+
+          { subCategories.length ?
+          <CustomCategorySelectFieldMaybe
+            id="subcategory"
+            name="subcategory"
+            categories={subCategories}
+            intl={intl}
+          /> : '' }
 
           <Button
             className={css.submitButton}

@@ -10,6 +10,8 @@ const initialState = {
 
 export default function reducer(state = initialState, action = {}) {
   const { type, payload } = action;
+
+  console.log(type)
   switch (type) {
     case DISABLE_SCROLLING: {
       const { componentId, disableScrolling } = payload;
