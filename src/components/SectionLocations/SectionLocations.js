@@ -1,0 +1,82 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { FormattedMessage } from '../../util/reactIntl';
+import classNames from 'classnames';
+import { lazyLoadWithDimensions } from '../../util/contextHelpers';
+
+import { NamedLink } from '../../components';
+
+import css from './SectionLocations.css';
+
+import djImage from './images/dj.jpg';
+import musiciansImage from './images/musicians.jpg';
+import concertImage from './images/concert.jpg';
+
+class LocationImage extends Component {
+  render() {
+    const { alt, ...rest } = this.props;
+    return <img alt={alt} {...rest} />;
+  }
+}
+const LazyImage = lazyLoadWithDimensions(LocationImage);
+
+const locationLink = (name, image, searchQuery) => {
+  const nameText = <span className={css.locationName}>{name}</span>;
+  return (
+    <NamedLink name="SearchPage" to={{ search: searchQuery }} className={css.location}>
+      <div className={css.imageWrapper}>
+        <div className={css.aspectWrapper}>
+          <LazyImage src={image} alt={name} className={css.locationImage} />
+        </div>
+      </div>
+      <div className={css.linkText}>
+        <FormattedMessage
+          id="SectionLocations.listingsInLocation"
+          values={{ location: nameText }}
+        />
+      </div>
+    </NamedLink>
+  );
+};
+
+const SectionLocations = props => {
+  const { rootClassName, className } = props;
+
+  const classes = classNames(rootClassName || css.root, className);
+
+  return (
+    <div className={classes}>
+      <div className={css.title}>
+        <FormattedMessage id="SectionLocations.title" />
+      </div>
+      <div className={css.locations}>
+        {locationLink(
+          'Audio tehnika',
+          djImage,
+          '?address=Latvija&bounds=58.35458402%2C26.07687936%2C55.48984116%2C22.39122891&mapSearch=false&pub_subcategory=auv_audio'
+        )}
+        {locationLink(
+          'Izpildītāji',
+          musiciansImage,
+          '?address=Latvija&bounds=58.35458402%2C26.07687936%2C55.48984116%2C22.39122891&mapSearch=false&pub_subcategory=pserv_muziki'
+        )}
+        {locationLink(
+          'Koncertzāles',
+          concertImage,
+          '?address=Latvija&bounds=58.35458402%2C26.07687936%2C55.48984116%2C22.39122891&mapSearch=false&pub_subcategory=tuv_zales'
+        )}
+      </div>
+    </div>
+  );
+};
+
+SectionLocations.defaultProps = { rootClassName: null, className: null };
+
+const { string } = PropTypes;
+
+SectionLocations.propTypes = {
+  rootClassName: string,
+  className: string,
+};
+
+export default SectionLocations;

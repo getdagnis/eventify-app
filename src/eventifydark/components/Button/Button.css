@@ -1,0 +1,50 @@
+.button {
+  display: flex;
+  background-color: rgb(255, 196, 0);
+  border: none;
+  border-radius: 2px;
+  padding: 1vh 2vh;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  color: black;
+  cursor: pointer;
+  margin: 3vh auto;
+  outline: none;
+}
+
+.button:hover {
+  padding: 1vh 3vh;
+  background-color: rgb(255, 196, 0);
+  color: black;
+  transition-duration: 0.2s;
+}
+
+.button:active {
+  background-color: rgb(255, 241, 194);
+  transition-duration: 0s;
+}
+
+.btn-small {
+  padding: 1vh 1.5vh;
+}
+
+.btn-small:hover {
+  background-color: rgb(255, 187, 0);
+  padding: 1vh 3vh;
+}
+
+.btn-dark {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgb(58, 58, 70);
+}
+
+.btn-dark:hover {
+  color: white;
+  background-color: rgb(84, 84, 97);
+}
+
+.btn-dark:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 187, 0);
+  transition-duration: 0s;
+}

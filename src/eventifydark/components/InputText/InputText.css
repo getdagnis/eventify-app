@@ -1,0 +1,38 @@
+.input-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 49vw;
+  max-width: 695px;
+  min-height: 7vh;
+  padding: 20px;
+  margin: 3vh auto;
+  box-sizing: border-box;
+  font-size: calc(10px + 0.5vw);
+  color: white;
+  background-color: rgba(56, 56, 56, 0.2);
+  border-radius: 0.5vh;
+  border: none;
+  outline: none;
+}
+
+.input-text:focus {
+  background-color: rgba(97, 97, 97, 0.2);
+}
+
+.input-last {
+  margin-bottom: -1vh;
+}
+
+.input-center {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .input-text {
+    font-size: calc(10px + 1vmin);
+    width: 50vw;
+    padding: 4px 0 4px 20px;
+    margin: 0;
+  }
+}
