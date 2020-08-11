@@ -39,7 +39,7 @@ import defaultMessages from './translations/lv.json';
 // Step 3:
 // If you are using a non-english locale, point `messagesInLocale` to correct .json file
 import messagesInLocale from './translations/lv.json';
-import('moment/locale/lv');
+import 'moment/locale/lv';
 
 moment.locale('lv');
 

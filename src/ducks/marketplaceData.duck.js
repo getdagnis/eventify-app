@@ -5,7 +5,6 @@ import { updatedEntities, denormalisedEntities } from '../util/data';
 export const ADD_MARKETPLACE_ENTITIES = 'app/marketplaceData/ADD_MARKETPLACE_ENTITIES';
 
 // ================ Reducer ================ //
-console.log('>>> marketplaceData.duck.js was launched');
 
 const initialState = {
   // Database of all the fetched entities.
@@ -63,10 +62,6 @@ export const getListingsById = (state, listingIds) => {
 export const getMarketplaceEntities = (state, entityRefs) => {
   const { entities } = state.marketplaceData;
   const throwIfNotFound = false;
-  console.log('getMarketplaceEntities state');
-  console.log(state);
-  console.log('getMarketplaceEntities entities');
-  console.log(entities);
   return denormalisedEntities(entities, entityRefs, throwIfNotFound);
 };
 
