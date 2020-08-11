@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   @media (--viewportLarge) {
@@ -38,7 +39,8 @@
 
     * flex-basis: calc((100%/columnCount) - (guttersBetweenColumns / columnCount))
     */
-    flex-basis: calc(50% - 12px);
+    flex-grow: 1;
+    flex-basis: calc(33% - 12px);
     margin-right: 24px;
   }
 
@@ -57,7 +59,7 @@
 
      * flex-basis: calc((100%/columnCount) - (guttersBetweenColumns / columnCount))
      */
-
+    flex-grow: 1;
     flex-basis: calc(33.33% - 16px);
     margin-right: 24px;
   }
