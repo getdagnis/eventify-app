@@ -4,6 +4,7 @@ import { Form as FinalForm, Field } from 'react-final-form';
 import { intlShape, injectIntl } from '../../util/reactIntl';
 import classNames from 'classnames';
 import { Form, LocationAutocompleteInput } from '../../components';
+import { Categories as eventifyCategories } from '../../categories';
 
 import css from './TopbarSearchForm.css';
 

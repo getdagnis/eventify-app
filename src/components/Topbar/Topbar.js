@@ -338,10 +338,7 @@ TopbarComponent.propTypes = {
   intl: intlShape.isRequired,
 };
 
-const Topbar = compose(
-  withViewport,
-  injectIntl
-)(TopbarComponent);
+const Topbar = compose(withViewport, injectIntl)(TopbarComponent);
 
 Topbar.displayName = 'Topbar';
 

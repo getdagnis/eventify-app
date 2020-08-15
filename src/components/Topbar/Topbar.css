@@ -256,7 +256,7 @@
 .genericErrorContent {
   padding: 16px 22px;
   border-radius: 4px;
-  background-color: var(--marketplaceColorLight);
+  background-color: rgb(230, 75, 54);
   border-radius: 4px;
 }
 

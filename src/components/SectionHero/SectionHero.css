@@ -71,7 +71,7 @@
 }
 
 strong {
-  font-family: 'Poppins' !important;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif !important;
   color: #f6a90a !important;
   font-weight: 700 !important;
 }

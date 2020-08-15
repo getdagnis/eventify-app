@@ -71,7 +71,7 @@ export class SearchPageComponent extends Component {
         paramName: 'pub_category',
         options: eventifyCategories,
       },
-      categoryFilter: {
+      subcategoryFilter: {
         paramName: 'pub_subcategory',
         options: eventifyCategories,
       },
@@ -127,7 +127,7 @@ export class SearchPageComponent extends Component {
         address,
         ...originMaybe,
         bounds: viewportBounds,
-        mapSearch: true,
+        mapSearch: false,
         ...validFilterParams(rest, this.filters()),
       };
 

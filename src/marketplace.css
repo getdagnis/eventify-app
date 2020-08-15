@@ -46,13 +46,17 @@
   --marketplaceColorLight: #ffe96a;
   --marketplaceColorDark: #da4500;
 
+  /* =========== Eventify Special =========== */
+  --avatarColorLight: #e47f51;
+  --avatarColorDark: #da4500;
+
   /* Used with inline CSS SVGs */
   --marketplaceColorEncoded: %23c0392b;
 
   --successColor: #2ecc71;
   --successColorDark: #239954;
   --successColorLight: #f0fff6;
-  --failColor: #ff0000;
+  --failColor: rgb(230, 75, 54);
   --failColorLight: #fff0f0;
   --attentionColor: #ffaa00;
   --attentionColorLight: #fff7f0;
