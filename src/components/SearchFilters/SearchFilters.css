@@ -79,10 +79,14 @@
   height: auto;
   min-height: 0;
   border-radius: 4px;
+  background-color: var(--marketplaceColor);
+  color: white;
 
+  &:hover,
   &:focus {
     outline: none;
-    background-color: var(--matterColorLight);
+    background-color: var(--marketplaceColorDark);
+    color: white;
     border-color: transparent;
     text-decoration: none;
     box-shadow: var(--boxShadowFilterButton);

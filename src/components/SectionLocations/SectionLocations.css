@@ -14,11 +14,11 @@
 .locations {
   display: flex;
   flex-direction: column;
-  margin-top: 32px;
+  margin-top: 22px;
 
   @media (--viewportMedium) {
     flex-direction: row;
-    margin-top: 57px;
+    margin-top: 38px;
   }
 }
 

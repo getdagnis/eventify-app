@@ -3,7 +3,7 @@ import { compose } from 'redux';
 import { object, string, bool, number, func, shape } from 'prop-types';
 import { FormattedMessage, injectIntl, intlShape } from '../../util/reactIntl';
 import classNames from 'classnames';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import omit from 'lodash/omit';
 
 import config from '../../config';
@@ -164,17 +164,9 @@ const SearchFiltersComponent = props => {
       ? css.searchFiltersPanelOpen
       : css.searchFiltersPanelClosed;
   const toggleSearchFiltersPanelButton = toggleSearchFiltersPanel ? (
-    <button
-      className={toggleSearchFiltersPanelButtonClasses}
-      onClick={() => {
-        toggleSearchFiltersPanel(!isSearchFiltersPanelOpen);
-      }}
-    >
-      <FormattedMessage
-        id="SearchFilters.moreFiltersButton"
-        values={{ count: searchFiltersPanelSelectedCount }}
-      />
-    </button>
+    <Link id="visas-kategorijas" to="/c">
+      <button className={css.searchFiltersPanelClosed}>Visas kategorijas</button>
+    </Link>
   ) : null;
 
   const handleSortBy = (urlParam, values) => {
@@ -265,9 +257,6 @@ SearchFiltersComponent.propTypes = {
   intl: intlShape.isRequired,
 };
 
-const SearchFilters = compose(
-  withRouter,
-  injectIntl
-)(SearchFiltersComponent);
+const SearchFilters = compose(withRouter, injectIntl)(SearchFiltersComponent);
 
 export default SearchFilters;

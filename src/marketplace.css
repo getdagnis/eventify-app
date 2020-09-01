@@ -40,15 +40,18 @@
     }
   }
 
+  /* =========== Eventify Special =========== */
+  --avatarColorLight: #f6a90a;
+  --avatarColorDark: #e77a30;
+
   /* ================ Colors ================ */
 
   --marketplaceColor: #f6a90a;
   --marketplaceColorLight: #ffe96a;
   --marketplaceColorDark: #da4500;
 
-  /* =========== Eventify Special =========== */
-  --avatarColorLight: #e47f51;
-  --avatarColorDark: #da4500;
+  /* --avatarColorLight: rgb(207, 61, 41);
+  --avatarColorDark: rgb(168, 38, 21); */
 
   /* Used with inline CSS SVGs */
   --marketplaceColorEncoded: %23c0392b;

@@ -2,6 +2,7 @@
 
 .title {
   @apply --marketplaceH1FontStyles;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   margin-top: 0;
 }
 

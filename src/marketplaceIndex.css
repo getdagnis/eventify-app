@@ -18,7 +18,7 @@ body {
 }
 
 ::-moz-selection {
-  background: var(--marketplaceColor); /* Gecko Browsers */
+  background: rgb(168, 38, 21); /* Gecko Browsers */
   color: var(--matterColorLight);
 }
 

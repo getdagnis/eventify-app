@@ -237,7 +237,7 @@
 
   /* Bleed the bg color from the bottom */
   padding-bottom: 4px;
-  background-color: var(--marketplaceColor);
+  background-color: rgb(168, 38, 21);
   border-radius: 4px;
 
   /* Place on top of everything */
@@ -258,6 +258,10 @@
   border-radius: 4px;
   background-color: rgb(230, 75, 54);
   border-radius: 4px;
+}
+
+.genericErrorContent::selection {
+  background-color: rgb(168, 38, 21) !important;
 }
 
 .genericErrorText {

@@ -2,6 +2,7 @@ import React from 'react';
 import {
   AboutPage,
   AuthenticationPage,
+  CategoriesPage,
   CheckoutPage,
   ContactDetailsPage,
   EditListingPage,
@@ -68,6 +69,12 @@ const routeConfiguration = () => {
       name: 'SearchPage',
       component: props => <SearchPage {...props} />,
       loadData: SearchPage.loadData,
+    },
+    {
+      path: '/c',
+      name: 'CategoriesPage',
+      component: props => <CategoriesPage {...props} />,
+      loadData: CategoriesPage.loadData,
     },
     {
       path: '/s/filters',

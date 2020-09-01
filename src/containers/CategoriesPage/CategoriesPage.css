@@ -1,0 +1,136 @@
+@import '../../marketplace.css';
+
+.pageTitle {
+  text-align: center;
+}
+
+.staticPageWrapper {
+  width: calc(100% - 48px);
+  max-width: 1620px;
+  margin: 24px auto;
+
+  @media (--viewportMedium) {
+    width: calc(100% - 72px);
+    margin: 10px auto;
+  }
+}
+.contentWrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (--viewportMedium) {
+    flex-wrap: nowrap;
+  }
+}
+
+.contentSide {
+  font-style: italic;
+
+  @media (--viewportMedium) {
+    width: 193px;
+    margin-right: 103px;
+    margin-top: 8px;
+  }
+}
+
+.contentMain {
+  width: 90%;
+
+  @media (--viewportMedium) {
+    max-width: 650px;
+  }
+}
+
+.subtitle {
+  @apply --marketplaceH3FontStyles;
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+
+.all-categories {
+  width: 95%;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  grid-gap: 3vh 3vh;
+  width: auto;
+  margin: 3vh auto;
+  height: auto;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(40, 42, 49);
+  padding: 2vh;
+  border-radius: 0.5vw;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 0 10px 3px rgba(28, 28, 32, 0.2);
+  transition: all 0.5s ease;
+}
+
+.category:hover {
+  transform: scale(1.06);
+  transition: all 0.2s ease;
+  background: rgb(48, 50, 58);
+  box-shadow: 0 0 10px 3px rgba(28, 28, 32, 0.8);
+  cursor: pointer;
+}
+
+.category:active {
+  transform: scale(1);
+  transition: all 0.2s ease;
+  box-shadow: 0 0 15px 5px rgba(28, 28, 32, 0.8);
+  background: rgb(53, 55, 65);
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+li,
+.subcategories {
+  color: #8b8b8b;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+strong {
+  font-weight: 500;
+  color: #4a4a4a;
+}
+
+a:hover,
+strong:hover {
+  text-decoration: none !important;
+  color: var(--marketplaceColorDark);
+}
+
+@media (min-width: 1260px) {
+  .categories {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1660px) {
+  .categories {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .categories {
+    grid-template-columns: 1fr;
+  }
+}
