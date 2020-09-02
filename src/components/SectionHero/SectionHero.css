@@ -115,3 +115,8 @@ strong {
     width: 260px;
   }
 }
+
+.heroButton,
+.heroButton:hover {
+  color: white !important;
+}

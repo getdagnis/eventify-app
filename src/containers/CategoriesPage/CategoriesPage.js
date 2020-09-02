@@ -20,7 +20,7 @@ const CategoriesPage = () => {
   const { siteTwitterHandle, siteFacebookPage } = config;
   const siteTwitterPage = twitterPageURL(siteTwitterHandle);
   const categoriesList = eventifyCategories.map(category => (
-    <div className="category">
+    <div className="category-block">
       <CategoryList key={category.id} id={category.id} cat={category}></CategoryList>
     </div>
   ));

@@ -10,7 +10,7 @@ export const Subcategory = props => {
   return (
     <Link id={myId} to={subcatLink}>
       <li key={myId} className="subcategories">
-        <strong>{props.name}</strong> (
+        <subcategory>{props.name}</subcategory> (
         {Math.random(0, 10) * 10 > 8 ? 0 : Math.floor(Math.random(0, 100) * 40)})
       </li>
     </Link>

@@ -71,7 +71,7 @@ const routeConfiguration = () => {
       loadData: SearchPage.loadData,
     },
     {
-      path: '/c',
+      path: '/kategorijas',
       name: 'CategoriesPage',
       component: props => <CategoriesPage {...props} />,
       loadData: CategoriesPage.loadData,
