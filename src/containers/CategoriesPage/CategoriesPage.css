@@ -2,6 +2,13 @@
 
 .pageTitle {
   text-align: center;
+  margin: 35px auto 5px !important;
+  font-size: 1.4rem;
+}
+
+eventify-yellow {
+  font-weight: 700 !important;
+  color: var(--marketplaceColor) !important;
 }
 
 .staticPageWrapper {
@@ -61,38 +68,33 @@
   height: auto;
 }
 
-.category-block {
+category {
   display: block;
   align-items: center;
-  justify-content: center;
-  background: rgb(40, 42, 49);
-  padding: 2vh;
-  border-radius: 0.5vw;
+  flex-flow: nowrap;
+  padding: 1.4vh 3vh 3vh;
+  border-radius: 0.2vh;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: 0 0 10px 3px rgba(28, 28, 32, 0.2) !important;
+  box-shadow: 0 0 10px 3px rgba(28, 28, 32, 0.03) !important;
   transition: all 0.5s ease;
 }
 
-.category-block:hover {
+category:hover {
   transform: scale(1.06);
   transition: all 0.2s ease;
-  background: rgb(48, 50, 58);
-  box-shadow: 0 0 10px 3px rgba(28, 28, 32, 0.8);
+  box-shadow: 0 0 10px 3px rgba(28, 28, 32, 0.1);
   cursor: pointer;
 }
 
-.category-block:active {
+category:active {
   transform: scale(1);
   transition: all 0.2s ease;
-  box-shadow: 0 0 15px 5px rgba(28, 28, 32, 0.8);
-  background: rgb(53, 55, 65);
+  box-shadow: 0 0 15px 5px rgba(28, 28, 32, 0.1);
 }
 
-h2 .pageTitle {
-  margin: 20px auto -20px !important;
-}
-
-h3 {
+h3 .categoryTitle {
+  display: block;
+  width: 100%;
   font-size: 1.2rem;
   font-weight: 700;
   color: #4a4a4a;

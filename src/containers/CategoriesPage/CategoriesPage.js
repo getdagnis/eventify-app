@@ -20,9 +20,9 @@ const CategoriesPage = () => {
   const { siteTwitterHandle, siteFacebookPage } = config;
   const siteTwitterPage = twitterPageURL(siteTwitterHandle);
   const categoriesList = eventifyCategories.map(category => (
-    <div className="category-block">
+    <category>
       <CategoryList key={category.id} id={category.id} cat={category}></CategoryList>
-    </div>
+    </category>
   ));
 
   console.log('eventifyCategories', eventifyCategories);
@@ -30,12 +30,12 @@ const CategoriesPage = () => {
   // prettier-ignore
   return (
     <StaticPage
-      title="Visas kategorijas"
+      title="Visas eventify kategorijas"
       schema={{
         '@context': 'http://schema.org',
         '@type': 'CategoriesPage',
         description: 'Visas eventify kategorijas',
-        name: 'Visas kategorijas',
+        name: 'Visas eventify kategorijas',
       }}
     >
       <LayoutSingleColumn>
@@ -44,7 +44,7 @@ const CategoriesPage = () => {
         </LayoutWrapperTopbar>
 
         <LayoutWrapperMain className={css.staticPageWrapper}>
-          <h2 className={css.pageTitle}>Visas kategorijas</h2>
+          <h2 className={css.pageTitle}>Visas <eventify-yellow>eventify</eventify-yellow> kategorijas</h2>
           <div className={css.categories}>{categoriesList}</div>
         </LayoutWrapperMain>
 

@@ -9,7 +9,7 @@ export const CategoryList = props => {
 
   return (
     <React.Fragment>
-      <h3>{category.name}</h3>
+      <h3 className="categoryTitle">{category.name}</h3>
       <ul>
         {subcategories.map(subcategory => (
           <Subcategory id={subcategory.id} name={subcategory.name} />
