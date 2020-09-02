@@ -703,6 +703,7 @@
   "SavedCardDetails.savedPaymentMethodPlaceholderDesktop": "•••• •••• •••• {last4Digits}",
   "SavedCardDetails.savedPaymentMethodPlaceholderMobile": "…{last4Digits}",
   "SearchFilters.filtersButtonLabel": "Filtri",
+  "SearchFilters.filtersCategoriesLabel": "Kategorijas",
   "SearchFilters.foundResults": "{count, number} {count, plural, one {rezultāts} other {rezultāti}}",
   "SearchFilters.keywordLabel": "Atslēgvārds",
   "SearchFilters.loadingResults": "Loading search results…",

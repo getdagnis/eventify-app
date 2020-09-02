@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { object, string, bool, number, func, shape, array } from 'prop-types';
 import classNames from 'classnames';
 import { FormattedMessage, injectIntl, intlShape } from '../../util/reactIntl';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import omit from 'lodash/omit';
 
 import config from '../../config';
@@ -336,9 +336,14 @@ class SearchFiltersMobileComponent extends Component {
             <FormattedMessage id="SearchFilters.filtersButtonLabel" className={css.mapIconText} />
           </Button>
           {sortBy}
-          <div className={css.mapIcon} onClick={onMapIconClick}>
-            <FormattedMessage id="SearchFilters.openMapView" className={css.mapIconText} />
-          </div>
+          <Link id="visas-kategorijas" to="/kategorijas">
+            <Button rootClassName={filtersButtonClasses}>
+              <FormattedMessage
+                id="SearchFilters.filtersCategoriesLabel"
+                className={css.mapIconText}
+              />
+            </Button>
+          </Link>
         </div>
         <ModalInMobile
           id="SearchFiltersMobile.filters"
