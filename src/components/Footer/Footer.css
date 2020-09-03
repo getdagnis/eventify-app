@@ -148,7 +148,7 @@
 /* Desktop and Mobile: links to more information */
 .infoLinks {
   order: 2;
-  flex-basis: 165px;
+  flex-basis: 160px;
   margin-right: 24px;
   margin-bottom: 24px;
 
@@ -196,7 +196,7 @@
 /* Desktop and Mobile: searches - first column */
 .searches {
   order: 3;
-  flex-basis: 165px;
+  flex-basis: 240px;
   margin-right: 24px;
   margin-bottom: 24px;
 
@@ -210,7 +210,7 @@
 /* This is not always visible */
 .searchesExtra {
   order: 4;
-  flex-basis: 165px;
+  flex-basis: 240px;
   margin-right: 24px;
   margin-bottom: 24px;
 

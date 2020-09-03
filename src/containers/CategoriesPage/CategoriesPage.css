@@ -83,7 +83,6 @@ category:hover {
   transform: scale(1.06);
   transition: all 0.2s ease;
   box-shadow: 0 0 10px 3px rgba(28, 28, 32, 0.1);
-  cursor: pointer;
 }
 
 category:active {
