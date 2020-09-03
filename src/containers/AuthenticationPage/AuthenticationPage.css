@@ -24,6 +24,7 @@
 /* ================ Tabs & Form ================ */
 
 .tabs {
+  font-size: 1rem;
   @media (--viewportMedium) {
     margin-top: 6px;
   }

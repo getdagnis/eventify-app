@@ -102,6 +102,10 @@
 
 .createNewListingLink {
   @apply --marketplaceButtonStyles;
+
+  @media (max-width: 767px) {
+    padding-top: 16px;
+  }
 }
 
 .authenticationGreeting {
