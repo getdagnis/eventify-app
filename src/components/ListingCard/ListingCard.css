@@ -45,7 +45,7 @@
   /* Layout */
   display: flex;
   flex-direction: row;
-  padding: 16px 0 2px 0;
+  padding: 8px 0;
 }
 
 .price {
