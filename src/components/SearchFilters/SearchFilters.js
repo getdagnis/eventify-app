@@ -165,7 +165,7 @@ const SearchFiltersComponent = props => {
       : css.searchFiltersPanelClosed;
   const toggleSearchFiltersPanelButton = toggleSearchFiltersPanel ? (
     <Link id="visas-kategorijas" to="/kategorijas">
-      <button className={css.searchFiltersPanelClosed}>Visas kategorijas</button>
+      <button className={css.searchFiltersPanelClosed}>Izvēlies kategoriju</button>
     </Link>
   ) : null;
 

@@ -44,7 +44,7 @@
   flex-grow: 1;
 
   /* Font */
-  @apply --marketplaceH1FontStyles;
+  @apply --marketplaceH3FontStyles;
 
   /* Layout */
   margin: 0 24px 0 0;
