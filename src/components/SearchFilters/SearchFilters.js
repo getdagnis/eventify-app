@@ -167,6 +167,9 @@ const SearchFiltersComponent = props => {
   const subcategory = props.subcategory;
   console.log('props.subcategory', subcategory);
   const kategorijuPoga = subcategory ? 'Kategorija: ' + subcategory : 'Izvēlies kategoriju';
+  const isSubcategorySelected = props.subcategory ? (
+    <category-title>{props.subcategory}</category-title>
+  ) : null;
 
   const toggleSearchFiltersPanelButton = toggleSearchFiltersPanel ? (
     <Link id="visas-kategorijas" to="/kategorijas">
@@ -211,6 +214,8 @@ const SearchFiltersComponent = props => {
         {keywordFilterElement}
         {toggleSearchFiltersPanelButton}
       </div>
+
+      {isSubcategorySelected}
 
       {hasNoResult ? (
         <div className={css.noSearchResults}>

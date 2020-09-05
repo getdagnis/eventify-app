@@ -210,7 +210,10 @@ export class SearchPageComponent extends Component {
     //     ? eventifyCategories.find(c => c.subcategories.includes(searchParams.pub_subcategory)).id
     //     : null;
 
-    const categoryIdBeginsWith = searchParams ? searchParams.pub_subcategory.slice(0, 3) : null;
+    const categoryIdBeginsWith =
+      searchParams && searchParams.pub_subcategory
+        ? searchParams.pub_subcategory.slice(0, 3)
+        : null;
     console.log('category first letters:', categoryIdBeginsWith);
     const subcategories = categoryIdBeginsWith
       ? eventifyCategories.find(c => c.id.slice(0, 3) === categoryIdBeginsWith).subcategories
@@ -220,7 +223,7 @@ export class SearchPageComponent extends Component {
 
     const subcategoryName = subcategories
       ? subcategories.find(s => s.id === searchParams.pub_subcategory).name
-      : 'no subcategories';
+      : null;
 
     subcategoryName
       ? console.log('subcategoryName', subcategoryName)

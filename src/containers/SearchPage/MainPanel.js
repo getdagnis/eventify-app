@@ -74,13 +74,9 @@ class MainPanel extends Component {
     const secondaryFilterParamNames = secondaryFilters
       ? Object.values(secondaryFilters).map(f => f.paramName)
       : [];
-    console.log(this.props.subcategory);
+
     return (
       <div className={classes}>
-        <category-title className="categoryTitle">
-          <Link to="/kategorijas">Kategorija: </Link>
-          {this.props.subcategory}
-        </category-title>
         <SearchFilters
           className={css.searchFilters}
           urlQueryParams={urlQueryParams}
