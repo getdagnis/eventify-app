@@ -6,7 +6,7 @@
   "ActivityFeed.ownTransitionAccept": "Tu apstiprināji nomas pieprasījumu.",
   "ActivityFeed.ownTransitionDecline": "Tu noraidīji nomas pieprasījumu.",
   "ActivityFeed.ownTransitionExpire": "Nomas pieprasījums ir novecojis. Tu neatbildēji laikā.",
-  "ActivityFeed.ownTransitionRequest": "Tu nosūtīji pieprasījumu nomāt { listingTitle }.",
+  "ActivityFeed.ownTransitionRequest": "Tu vēlējies nomāt piedāvājumu \"{ listingTitle }\".",
   "ActivityFeed.ownTransitionReview": "Tu ierakstīji atsauksmi par { displayName }.",
   "ActivityFeed.showOlderMessages": "Parādīt vecākus",
   "ActivityFeed.today": "Šodien",

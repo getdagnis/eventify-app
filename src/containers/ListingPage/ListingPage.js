@@ -379,6 +379,9 @@ export class ListingPageComponent extends Component {
         </span>
       ) : null;
 
+    const subcategoryId = publicData && publicData.subcategory ? publicData.subcategory : null;
+    console.log('subcategoryId', subcategoryId);
+
     const subcategories =
       publicData && publicData.category
         ? eventifyCategories.find(c => c.id === publicData.category).subcategories
@@ -437,6 +440,7 @@ export class ListingPageComponent extends Component {
                     formattedPrice={formattedPrice}
                     richTitle={richTitle}
                     subcategory={subcategory}
+                    subcategoryId={subcategoryId}
                     hostLink={hostLink}
                     showContactUser={showContactUser}
                     onContactUser={this.onContactUser}

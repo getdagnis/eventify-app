@@ -3,6 +3,7 @@ import { FormattedMessage } from '../../util/reactIntl';
 import { InlineTextButton } from '../../components';
 import { LINE_ITEM_NIGHT, LINE_ITEM_DAY } from '../../util/types';
 import config from '../../config';
+import { Link } from 'react-router-dom';
 
 import css from './ListingPage.css';
 
@@ -12,6 +13,7 @@ const SectionHeading = props => {
     formattedPrice,
     richTitle,
     subcategory,
+    subcategoryId,
     hostLink,
     showContactUser,
     onContactUser,
@@ -40,16 +42,8 @@ const SectionHeading = props => {
       <div className={css.heading}>
         <h1 className={css.title}>{richTitle}</h1>
         <div className={css.author}>
-          {subcategory}
+          <Link to={'/s?pub_subcategory=' + subcategoryId}>{subcategory}</Link>
           <FormattedMessage id="ListingPage.hostedBy" values={{ name: hostLink }} />
-          {showContactUser ? (
-            <span className={css.contactWrapper}>
-              <span className={css.separator}>•</span>
-              <InlineTextButton rootClassName={css.contactLink} onClick={onContactUser}>
-                <FormattedMessage id="ListingPage.contactUser" />
-              </InlineTextButton>
-            </span>
-          ) : null}
         </div>
       </div>
     </div>

@@ -384,6 +384,7 @@
 
 .separator {
   margin: 0 6px;
+  color: #999 !important;
 }
 
 .contactLink {

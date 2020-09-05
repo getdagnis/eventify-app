@@ -11,7 +11,6 @@ import {
   SearchFiltersPanel,
 } from '../../components';
 import { validFilterParams } from './SearchPage.helpers';
-import { Link } from 'react-router-dom';
 
 import css from './SearchPage.css';
 
