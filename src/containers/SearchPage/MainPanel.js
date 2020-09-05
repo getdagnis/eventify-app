@@ -11,6 +11,7 @@ import {
   SearchFiltersPanel,
 } from '../../components';
 import { validFilterParams } from './SearchPage.helpers';
+import { Link } from 'react-router-dom';
 
 import css from './SearchPage.css';
 
@@ -73,9 +74,13 @@ class MainPanel extends Component {
     const secondaryFilterParamNames = secondaryFilters
       ? Object.values(secondaryFilters).map(f => f.paramName)
       : [];
-
+    console.log(this.props.subcategory);
     return (
       <div className={classes}>
+        <category-title className="categoryTitle">
+          <Link to="/kategorijas">Kategorijas: </Link>
+          {this.props.subcategory}
+        </category-title>
         <SearchFilters
           className={css.searchFilters}
           urlQueryParams={urlQueryParams}

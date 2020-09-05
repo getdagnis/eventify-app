@@ -24,8 +24,7 @@ const SectionHero = props => {
         <NamedLink
           name="SearchPage"
           to={{
-            search:
-              'address=Latvija&bounds=58.35458402%2C26.07687936%2C55.48984116%2C22.39122891&mapSearch=true',
+            search: '',
           }}
           className={css.heroButton}
         >

@@ -393,7 +393,6 @@ export class ListingPageComponent extends Component {
           <span className={css.separator}>•</span>
         </span>
       ) : null;
-    console.log('ListingPage.js publicData', publicData);
 
     return (
       <Page
@@ -432,11 +431,6 @@ export class ListingPageComponent extends Component {
                 onManageDisableScrolling={onManageDisableScrolling}
               />
               <div className={css.contentContainer}>
-                <SectionAvatar
-                  className="listing-page-avatar"
-                  user={currentAuthor}
-                  params={params}
-                />
                 <div className={css.mainContent}>
                   <SectionHeading
                     priceTitle={priceTitle}

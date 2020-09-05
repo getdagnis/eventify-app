@@ -200,6 +200,32 @@ export class SearchPageComponent extends Component {
       ? classNames(css.topbarBehindModal, css.topbar)
       : css.topbar;
 
+    // const categoryId =
+    //   searchParams && searchParams.pub_subcategory
+    //     ? eventifyCategories.find(c => c.subcategories.includes(searchParams.pub_subcategory))
+    //     : null;
+
+    // const subcategoryName =
+    //   searchParams && searchParams.pub_subcategory
+    //     ? eventifyCategories.find(c => c.subcategories.includes(searchParams.pub_subcategory)).id
+    //     : null;
+
+    const categoryIdBeginsWith = searchParams ? searchParams.pub_subcategory.slice(0, 3) : null;
+    console.log('category first letters:', categoryIdBeginsWith);
+    const subcategories = categoryIdBeginsWith
+      ? eventifyCategories.find(c => c.id.slice(0, 3) === categoryIdBeginsWith).subcategories
+      : null;
+
+    subcategories ? console.log('subcategories', subcategories) : console.log('no subcategories');
+
+    const subcategoryName = subcategories
+      ? subcategories.find(s => s.id === searchParams.pub_subcategory).name
+      : 'no subcategories';
+
+    subcategoryName
+      ? console.log('subcategoryName', subcategoryName)
+      : console.log('no subcategory name');
+
     // N.B. openMobileMap button is sticky.
     // For some reason, stickyness doesn't work on Safari, if the element is <button>
     /* eslint-disable jsx-a11y/no-static-element-interactions */
@@ -220,6 +246,7 @@ export class SearchPageComponent extends Component {
             urlQueryParams={validQueryParams}
             sort={sort}
             listings={listings}
+            subcategory={subcategoryName}
             searchInProgress={searchInProgress}
             searchListingsError={searchListingsError}
             searchParamsAreInSync={searchParamsAreInSync}
@@ -334,7 +361,6 @@ const mapStateToProps = state => {
     activeListingId,
   } = state.SearchPage;
   const pageListings = getListingsById(state, currentPageResultIds);
-  console.log('searchPage pageListings', pageListings);
   const mapListings = getListingsById(
     state,
     unionWith(currentPageResultIds, searchMapListingIds, (id1, id2) => id1.uuid === id2.uuid)

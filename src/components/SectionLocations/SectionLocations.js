@@ -50,21 +50,9 @@ const SectionLocations = props => {
         <FormattedMessage id="SectionLocations.title" />
       </div>
       <div className={css.locations}>
-        {locationLink(
-          'Audio tehnika',
-          djImage,
-          '?address=Latvija&bounds=58.35458402%2C26.07687936%2C55.48984116%2C22.39122891&mapSearch=false&pub_subcategory=auv_audio'
-        )}
-        {locationLink(
-          'Izpildītāji',
-          musiciansImage,
-          '?address=Latvija&bounds=58.35458402%2C26.07687936%2C55.48984116%2C22.39122891&mapSearch=false&pub_subcategory=pserv_muziki'
-        )}
-        {locationLink(
-          'Koncertzāles',
-          concertImage,
-          '?address=Latvija&bounds=58.35458402%2C26.07687936%2C55.48984116%2C22.39122891&mapSearch=false&pub_subcategory=tuv_zales'
-        )}
+        {locationLink('Audio tehnika', djImage, '?pub_subcategory=auv_audio')}
+        {locationLink('Izpildītāji', musiciansImage, '?pub_subcategory=pserv_muziki')}
+        {locationLink('Koncertzāles', concertImage, '?pub_subcategory=tuv_zales')}
       </div>
     </div>
   );

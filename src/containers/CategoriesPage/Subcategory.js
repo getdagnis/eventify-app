@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Subcategory = props => {
   const myId = props.id;
-  const subcatLink =
-    's?address=Latvija&bounds=58.35458402%2C26.07687936%2C55.48984116%2C22.39122891&mapSearch=false&pub_subcategory=' +
-    props.id;
+  const subcatLink = 's?pub_subcategory=' + props.id;
 
   return (
     <Link id={myId} to={subcatLink}>
