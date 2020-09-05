@@ -163,9 +163,14 @@ const SearchFiltersComponent = props => {
     isSearchFiltersPanelOpen || searchFiltersPanelSelectedCount > 0
       ? css.searchFiltersPanelOpen
       : css.searchFiltersPanelClosed;
+
+  const subcategory = props.subcategory;
+  console.log('props.subcategory', subcategory);
+  const kategorijuPoga = subcategory ? 'Kategorija: ' + subcategory : 'Izvēlies kategoriju';
+
   const toggleSearchFiltersPanelButton = toggleSearchFiltersPanel ? (
     <Link id="visas-kategorijas" to="/kategorijas">
-      <button className={css.searchFiltersPanelClosed}>Izvēlies kategoriju</button>
+      <button className={css.searchFiltersPanelClosed}>{kategorijuPoga}</button>
     </Link>
   ) : null;
 

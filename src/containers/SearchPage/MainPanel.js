@@ -78,13 +78,14 @@ class MainPanel extends Component {
     return (
       <div className={classes}>
         <category-title className="categoryTitle">
-          <Link to="/kategorijas">Kategorijas: </Link>
+          <Link to="/kategorijas">Kategorija: </Link>
           {this.props.subcategory}
         </category-title>
         <SearchFilters
           className={css.searchFilters}
           urlQueryParams={urlQueryParams}
           sort={sort}
+          subcategory={this.props.subcategory}
           listingsAreLoaded={listingsAreLoaded}
           resultsCount={totalItems}
           searchInProgress={searchInProgress}
