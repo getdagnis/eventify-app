@@ -74,8 +74,13 @@ const Footer = props => {
                 </p>
                 <p className={css.organizationCopyright}>
                   <NamedLink name="LandingPage" className={css.copyrightLink}>
-                    <FormattedMessage id="Footer.copyright" />
+                    © eventify 2020
                   </NamedLink>
+                </p>
+                <p className={css.organizationCopyright}>
+                  <ExternalLink href="https://twitter.com/getdagnis" className={css.copyrightLink}>
+                    © izstrāde: getdagnis
+                  </ExternalLink>
                 </p>
               </div>
             </div>
