@@ -31,7 +31,7 @@ export const EditListingPoliciesFormComponent = props => (
       console.log('isAService', isAService);
 
       const rulesLabelMessage = isAService
-        ? 'Apraksti piedāvāto profesionāļa pakalpojumu precīzāk'
+        ? 'Apraksti savus pakalpojumus'
         : intl.formatMessage({
             id: 'EditListingPoliciesForm.rulesLabel',
           });
@@ -42,7 +42,7 @@ export const EditListingPoliciesFormComponent = props => (
           });
 
       const padoms = isAService ? (
-        'Padoms: Apraksti savu profesionālo pieredzi pēc iespējas plašāk, tas palīdzēs klientiem izvēlēties tieši tevi! Cik sen jau nodarbojies ar šādu pakalpojumu sniegšanu, kādas ir tavas prasmes, pakalpojuma nosacījumi, pieejamība u.c....'
+        'Padoms: Apraksti savu profesionālo pieredzi pēc iespējas plašāk, tas palīdzēs klientiem izvēlēties tieši tevi!'
       ) : (
         <FormattedMessage id="EditListingPoliciesForm.editPoliciesTip" />
       );

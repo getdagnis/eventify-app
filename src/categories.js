@@ -4,6 +4,11 @@ export const Categories = [
     id: 'pserv_main',
     subcategories: [
       {
+        name: 'Dizaineri un programmētāji',
+        id: 'pserv_programmesana',
+        apraksts: 'dizains, maketēšana, dagnis, edmunds',
+      },
+      {
         name: 'Skatuves mākslinieki, mūziķi',
         id: 'pserv_muziki',
         apraksts:
@@ -68,6 +73,120 @@ export const Categories = [
         name: 'Vizāžisti, stilisti, frizieri',
         id: 'pserv_vizazisti',
         apraksts: 'Apraksts',
+      },
+    ],
+  },
+
+  {
+    name: '🛋 Mēbeles un interjers',
+    id: 'mui_mebeles',
+    subcategories: [
+      {
+        name: 'Galdi',
+        id: 'mui_galdi',
+        apraksts: 'Apraksts',
+      },
+      {
+        name: 'Letes',
+        id: 'mui_letes',
+        apraksts: 'Apraksts',
+      },
+      {
+        name: 'Krēsli',
+        id: 'mui_kresli',
+        apraksts: 'Apraksts',
+      },
+      {
+        name: 'Dīvāni',
+        id: 'mui_divani',
+        apraksts: 'Apraksts',
+      },
+      {
+        name: 'LED mēbeles',
+        id: 'mui_led_mebeles',
+        apraksts: 'Apraksts',
+      },
+      {
+        name: 'Statīvi un iekštelpu norobežojumi',
+        id: 'mui_stativi',
+        apraksts: 'sienas, žogi, zogi',
+      },
+      {
+        name: 'Aizslietņi',
+        id: 'mui_aizslietni',
+        apraksts: 'Apraksts',
+      },
+      {
+        name: 'Uzglabāšanas kastes',
+        id: 'mui_kastes',
+        apraksts: 'uzglabasana',
+      },
+      {
+        name: 'Plaukti, skapji, kumodes',
+        id: 'mui_skapji',
+        apraksts: 'Apraksts',
+      },
+      {
+        name: 'Garderobes statīvi',
+        id: 'mui_garderobes',
+        apraksts: 'Apraksts',
+      },
+    ],
+  },
+  {
+    name: '👗 Tērpi un tekstils',
+    id: 'tut_terpi',
+    subcategories: [
+      {
+        name: 'Galdauti',
+        id: 'tut_galdauti',
+        apraksts: 'Šīs ir tiešām lielas kleitas',
+      },
+      {
+        name: 'Krēslu pārvalki',
+        id: 'tut_parvalki',
+        apraksts: 'Šīs ir tiešām mazas kleitas',
+      },
+      {
+        name: 'Krēslu spilveni',
+        id: 'tut_spilveni',
+        apraksts: 'Šīs ir tiešām īpašas kleitas',
+      },
+      {
+        name: 'Dekoratīvi audumi',
+        id: 'tut_audumi',
+        apraksts: 'Šīs ir tiešām citas kleitas',
+      },
+      {
+        name: 'Drapērijas',
+        id: 'tut_draperijas',
+        apraksts: 'Šīs ir tiešām lielas kleitas',
+      },
+      {
+        name: 'Aizkari',
+        id: 'tut_aizkari',
+        apraksts: 'Šīs ir tiešām mazas kleitas',
+      },
+      {
+        name: 'Paklāji',
+        id: 'tut_paklaji',
+        apraksts: 'Šīs ir tiešām īpašas kleitas',
+      },
+      {
+        name: 'Salvetes',
+        id: 'tut_salvetes',
+        apraksts: 'Šīs ir tiešām citas kleitas',
+      },
+      {
+        name: 'Karodziņu virtenes',
+        id: 'tut_karodzini',
+        apraksts: 'Šīs ir tiešām īpašas kleitas',
+      },
+      {
+        name: 'Tērpu noma',
+        id: 'tut_terpu_noma',
+        apraksts:
+          'Bikses, krekli, drēbes, drebes, kleitas, uzvalki, smokingi, šlipses, kurpes, zābaki, kostīmi',
       },
     ],
   },
@@ -312,119 +431,6 @@ export const Categories = [
     ],
   },
   {
-    name: '🛋 Mēbeles un interjers',
-    id: 'mui_mebeles',
-    subcategories: [
-      {
-        name: 'Galdi',
-        id: 'mui_galdi',
-        apraksts: 'Apraksts',
-      },
-      {
-        name: 'Letes',
-        id: 'mui_letes',
-        apraksts: 'Apraksts',
-      },
-      {
-        name: 'Krēsli',
-        id: 'mui_kresli',
-        apraksts: 'Apraksts',
-      },
-      {
-        name: 'Dīvāni',
-        id: 'mui_divani',
-        apraksts: 'Apraksts',
-      },
-      {
-        name: 'LED mēbeles',
-        id: 'mui_led_mebeles',
-        apraksts: 'Apraksts',
-      },
-      {
-        name: 'Statīvi un iekštelpu norobežojumi',
-        id: 'mui_stativi',
-        apraksts: 'sienas, žogi, zogi',
-      },
-      {
-        name: 'Aizslietņi',
-        id: 'mui_aizslietni',
-        apraksts: 'Apraksts',
-      },
-      {
-        name: 'Uzglabāšanas kastes',
-        id: 'mui_kastes',
-        apraksts: 'uzglabasana',
-      },
-      {
-        name: 'Plaukti, skapji, kumodes',
-        id: 'mui_skapji',
-        apraksts: 'Apraksts',
-      },
-      {
-        name: 'Garderobes statīvi',
-        id: 'mui_garderobes',
-        apraksts: 'Apraksts',
-      },
-    ],
-  },
-  {
-    name: '👗 Tērpi un tekstils',
-    id: 'tut_terpi',
-    subcategories: [
-      {
-        name: 'Galdauti',
-        id: 'tut_galdauti',
-        apraksts: 'Šīs ir tiešām lielas kleitas',
-      },
-      {
-        name: 'Krēslu pārvalki',
-        id: 'tut_parvalki',
-        apraksts: 'Šīs ir tiešām mazas kleitas',
-      },
-      {
-        name: 'Krēslu spilveni',
-        id: 'tut_spilveni',
-        apraksts: 'Šīs ir tiešām īpašas kleitas',
-      },
-      {
-        name: 'Dekoratīvi audumi',
-        id: 'tut_audumi',
-        apraksts: 'Šīs ir tiešām citas kleitas',
-      },
-      {
-        name: 'Drapērijas',
-        id: 'tut_draperijas',
-        apraksts: 'Šīs ir tiešām lielas kleitas',
-      },
-      {
-        name: 'Aizkari',
-        id: 'tut_aizkari',
-        apraksts: 'Šīs ir tiešām mazas kleitas',
-      },
-      {
-        name: 'Paklāji',
-        id: 'tut_paklaji',
-        apraksts: 'Šīs ir tiešām īpašas kleitas',
-      },
-      {
-        name: 'Salvetes',
-        id: 'tut_salvetes',
-        apraksts: 'Šīs ir tiešām citas kleitas',
-      },
-      {
-        name: 'Karodziņu virtenes',
-        id: 'tut_karodzini',
-        apraksts: 'Šīs ir tiešām īpašas kleitas',
-      },
-      {
-        name: 'Tērpu noma',
-        id: 'tut_terpu_noma',
-        apraksts:
-          'Bikses, krekli, drēbes, drebes, kleitas, uzvalki, smokingi, šlipses, kurpes, zābaki, kostīmi',
-      },
-    ],
-  },
-  {
     name: '🏗 Ražotāji, drukātāji, būvētāji',
     id: 'rdb_main',
     subcategories: [
@@ -437,11 +443,6 @@ export const Categories = [
         name: 'Drukāšana un aplīmēšana',
         id: 'rdb_drukataji',
         apraksts: 'Baneri, reklāmas, uzlīmes, flaijeri',
-      },
-      {
-        name: 'Programmēšana, dizains, maketēšana',
-        id: 'rdb_programmesana',
-        apraksts: 'Izgatavotaji, dagnis, edmunds',
       },
       {
         name: 'Galdniecība un metālapstrāde',
