@@ -12,22 +12,22 @@ import {
 } from '../../components';
 import { Categories as eventifyCategories } from '../../categories';
 import { CategoryList } from './CategoryList';
+import { searchListings } from '../SearchPage/SearchPage.duck';
 
 import css from './CategoriesPage.css';
-import image from './about-us-1056.jpg';
 
 const CategoriesPage = () => {
   const { siteTwitterHandle, siteFacebookPage } = config;
   const siteTwitterPage = twitterPageURL(siteTwitterHandle);
-  const categoriesList = eventifyCategories.map(category => (
+  const categoriesList = eventifyCategories.map(c => (
     <category>
-      <CategoryList key={category.id} id={category.id} cat={category}></CategoryList>
+      <CategoryList key={c.id} id={c.id} cat={c}></CategoryList>
     </category>
   ));
 
   console.log('eventifyCategories', eventifyCategories);
+  console.log('searchListings', searchListings);
 
-  // prettier-ignore
   return (
     <StaticPage
       title="Visas eventify kategorijas"
@@ -44,7 +44,9 @@ const CategoriesPage = () => {
         </LayoutWrapperTopbar>
 
         <LayoutWrapperMain className={css.staticPageWrapper}>
-          <h2 className={css.pageTitle}>Visas <eventify-yellow>eventify</eventify-yellow> kategorijas</h2>
+          <h2 className={css.pageTitle}>
+            Visas <eventify-yellow>eventify</eventify-yellow> kategorijas
+          </h2>
           <div className={css.categories}>{categoriesList}</div>
         </LayoutWrapperMain>
 

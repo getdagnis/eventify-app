@@ -521,7 +521,7 @@ export const Categories = [
         apraksts: 'koncertiem, estrades',
       },
       {
-        name: 'Ierakstu studijas un mēģinājumu zāles',
+        name: 'Ierakstu studijas un mēģinājumu telpas',
         id: 'tuv_studijas',
         apraksts: 'mēģi, meginajumu zales, record studio',
       },

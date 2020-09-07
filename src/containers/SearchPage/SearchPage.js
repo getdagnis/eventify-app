@@ -16,6 +16,7 @@ import { getListingsById } from '../../ducks/marketplaceData.duck';
 import { manageDisableScrolling, isScrollingDisabled } from '../../ducks/UI.duck';
 import { SearchMap, ModalInMobile, Page } from '../../components';
 import { TopbarContainer } from '../../containers';
+import { CategoryList } from '../CategoriesPage/CategoryList';
 import { Categories as eventifyCategories } from '../../categories';
 
 import { searchListings, searchMapListings, setActiveListing } from './SearchPage.duck';
@@ -229,6 +230,12 @@ export class SearchPageComponent extends Component {
       ? console.log('subcategoryName', subcategoryName)
       : console.log('no subcategory name');
 
+    const categoriesList = eventifyCategories.map(category => (
+      <category>
+        <CategoryList key={category.id} id={category.id} cat={category}></CategoryList>
+      </category>
+    ));
+
     // N.B. openMobileMap button is sticky.
     // For some reason, stickyness doesn't work on Safari, if the element is <button>
     /* eslint-disable jsx-a11y/no-static-element-interactions */
@@ -298,6 +305,10 @@ export class SearchPageComponent extends Component {
               ) : null}
             </div>
           </ModalInMobile>
+          <search-h2>
+            Visas <eventify-yellow>eventify</eventify-yellow> kategorijas
+          </search-h2>
+          <div className={css.categories}>{categoriesList}</div>
         </div>
       </Page>
     );

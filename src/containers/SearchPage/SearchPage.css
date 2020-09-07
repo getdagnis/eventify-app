@@ -143,6 +143,41 @@ category-title {
   height: 100%;
 }
 
+search-h2 {
+  padding: 0 36px !important;
+  margin: 12vh 0 12vh !important;
+  font-size: 24px;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  grid-gap: 4vh 3vh;
+  width: auto;
+  margin: 2vh auto 3vh;
+  padding: 0 36px;
+  height: auto;
+}
+
+@media (min-width: 1260px) {
+  .categories {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1660px) {
+  .categories {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .categories {
+    grid-template-columns: 1fr;
+  }
+}
+
 .map {
   width: 100vw;
   height: 100vh;
