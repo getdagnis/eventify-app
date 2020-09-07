@@ -151,7 +151,7 @@
   "EditListingDescriptionForm.subcategoryPlaceholder": "Izvēlies apakškategoriju…",
   "EditListingDescriptionForm.subcategoryRequired": "Tev ir jāizvēlas piedāvājuma apakškategorija!",
   "EditListingDescriptionForm.createListingDraftError": "Neizdevās saglabāt piedāvājuma melnrakstu. Lūdzu, mēģini vēlreiz...",
-  "EditListingDescriptionForm.description": "Piedāvājuma pilns apraksts",
+  "EditListingDescriptionForm.description": "Pilns piedāvājuma apraksts",
   "EditListingDescriptionForm.descriptionPlaceholder": "Apraksti savu piedāvājumu!",
   "EditListingDescriptionForm.descriptionRequired": "Apraksts ir nepieciešams.",
   "EditListingDescriptionForm.maxLength": "Must be {maxLength} characters or less",

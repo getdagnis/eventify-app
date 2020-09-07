@@ -29,7 +29,7 @@ const callLoadData = props => {
     dispatch(loadData(match.params, location.search))
       .then(r => {
         // eslint-disable-next-line no-console
-        console.log(`loadData success for ${name} route`, r);
+        console.log(`loadData success for ${name} route`, r.data);
       })
       .catch(e => {
         log.error(e, 'load-data-failed', { routeName: name });

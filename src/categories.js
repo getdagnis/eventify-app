@@ -1,5 +1,77 @@
 export const Categories = [
   {
+    name: '👩‍🏭 Profesionāļu pakalpojumi',
+    id: 'pserv_main',
+    subcategories: [
+      {
+        name: 'Skatuves mākslinieki, mūziķi',
+        id: 'pserv_muziki',
+        apraksts:
+          'Dziedātāji, izpildītāji, dziedataji, izpilditaji, grupas, bunģieri, ģitāristi, vijolisti, klavieru spēlētāji',
+      },
+      {
+        name: 'Šovu un pasākumu vadītāji',
+        id: 'pserv_vaditaji',
+        apraksts: 'Runasvīri, diktori, aktieri, sabiedrībā pazīstamas sejas',
+      },
+      {
+        name: 'Pasākumu menedžeri',
+        id: 'pserv_organizatori',
+        apraksts: 'freelanceri, menedzeri, organizetaji, andis',
+      },
+      {
+        name: 'Promoteri',
+        id: 'pserv_promoteri',
+        apraksts: 'reklāmisti, reklamas specialisti, reklāmas speciālisti',
+      },
+      {
+        name: 'Pasākumu tehniskie darbinieki',
+        id: 'pserv_tehniskie',
+        apraksts: 'Strādnieki, stradnieki, elektriki',
+      },
+      {
+        name: 'Fotogrāfi',
+        id: 'pserv_fotografi',
+        apraksts: 'fotografijas',
+      },
+      {
+        name: 'Spēļu un aktivitāšu veidotāji',
+        id: 'pserv_aktivitates',
+        apraksts: 'speles un aktivitates',
+      },
+      {
+        name: 'Gaismotāji',
+        id: 'pserv_gaismotaji',
+        apraksts: 'gaismas, prozektori',
+      },
+      {
+        name: 'Skaņotāji un DJ',
+        id: 'pserv_skanotaji',
+        apraksts: 'skanotaji, didzeji, dīdžeji',
+      },
+      {
+        name: 'Pavāri, viesmīļi, bārmeņi',
+        id: 'pserv_pavari',
+        apraksts: 'pavari, viesmili, barmeni, virtuves darbinieki',
+      },
+      {
+        name: 'Scenogrāfi un mākslinieki',
+        id: 'pserv_scenografi',
+        apraksts: 'Skatuvju iekārtotāji, dagnis',
+      },
+      {
+        name: 'Tulki un scenāristi',
+        id: 'pserv_tulki',
+        apraksts: 'Rakstnieki, scenaristi, dzejnieki, tekstu autori',
+      },
+      {
+        name: 'Vizāžisti, stilisti, frizieri',
+        id: 'pserv_vizazisti',
+        apraksts: 'Apraksts',
+      },
+    ],
+  },
+  {
     name: '🎤 Audio un video tehnika',
     id: 'auv_tehnika',
     subcategories: [
@@ -236,78 +308,6 @@ export const Categories = [
         name: 'Telpaugu noma',
         id: 'gpud_augu_noma',
         apraksts: 'augi',
-      },
-    ],
-  },
-  {
-    name: '👩‍🏭 Profesionāļu serviss',
-    id: 'pserv_main',
-    subcategories: [
-      {
-        name: 'Skatuves mākslinieki, mūziķi',
-        id: 'pserv_muziki',
-        apraksts:
-          'Dziedātāji, izpildītāji, dziedataji, izpilditaji, grupas, bunģieri, ģitāristi, vijolisti, klavieru spēlētāji',
-      },
-      {
-        name: 'Šovu un pasākumu vadītāji',
-        id: 'pserv_vaditaji',
-        apraksts: 'Runasvīri, diktori, aktieri, sabiedrībā pazīstamas sejas',
-      },
-      {
-        name: 'Pasākumu menedžeri',
-        id: 'pserv_organizatori',
-        apraksts: 'freelanceri, menedzeri, organizetaji, andis',
-      },
-      {
-        name: 'Promoteri',
-        id: 'pserv_promoteri',
-        apraksts: 'reklāmisti, reklamas specialisti, reklāmas speciālisti',
-      },
-      {
-        name: 'Pasākumu tehniskie darbinieki',
-        id: 'pserv_tehniskie',
-        apraksts: 'Strādnieki, stradnieki, elektriki',
-      },
-      {
-        name: 'Fotogrāfi',
-        id: 'pserv_fotografi',
-        apraksts: 'fotografijas',
-      },
-      {
-        name: 'Spēļu un aktivitāšu veidotāji',
-        id: 'pserv_aktivitates',
-        apraksts: 'speles un aktivitates',
-      },
-      {
-        name: 'Gaismotāji',
-        id: 'pserv_gaismotaji',
-        apraksts: 'gaismas, prozektori',
-      },
-      {
-        name: 'Skaņotāji un DJ',
-        id: 'pserv_skanotaji',
-        apraksts: 'skanotaji, didzeji, dīdžeji',
-      },
-      {
-        name: 'Pavāri, viesmīļi, bārmeņi',
-        id: 'pserv_pavari',
-        apraksts: 'pavari, viesmili, barmeni, virtuves darbinieki',
-      },
-      {
-        name: 'Scenogrāfi un mākslinieki',
-        id: 'pserv_scenografi',
-        apraksts: 'Skatuvju iekārtotāji, dagnis',
-      },
-      {
-        name: 'Tulki un scenāristi',
-        id: 'pserv_tulki',
-        apraksts: 'Rakstnieki, scenaristi, dzejnieki, tekstu autori',
-      },
-      {
-        name: 'Vizāžisti, stilisti, frizieri',
-        id: 'pserv_vizazisti',
-        apraksts: 'Apraksts',
       },
     ],
   },

@@ -25,14 +25,27 @@ export const EditListingPoliciesFormComponent = props => (
         updated,
         updateInProgress,
         fetchErrors,
+        isAService,
       } = formRenderProps;
 
-      const rulesLabelMessage = intl.formatMessage({
-        id: 'EditListingPoliciesForm.rulesLabel',
-      });
-      const rulesPlaceholderMessage = intl.formatMessage({
-        id: 'EditListingPoliciesForm.rulesPlaceholder',
-      });
+      console.log('isAService', isAService);
+
+      const rulesLabelMessage = isAService
+        ? 'Apraksti piedāvāto profesionāļa pakalpojumu precīzāk'
+        : intl.formatMessage({
+            id: 'EditListingPoliciesForm.rulesLabel',
+          });
+      const rulesPlaceholderMessage = isAService
+        ? 'Profesionālā pieredze, prasmes, pieejamība...'
+        : intl.formatMessage({
+            id: 'EditListingPoliciesForm.rulesPlaceholder',
+          });
+
+      const padoms = isAService ? (
+        'Padoms: Apraksti savu profesionālo pieredzi pēc iespējas plašāk, tas palīdzēs klientiem izvēlēties tieši tevi! Cik sen jau nodarbojies ar šādu pakalpojumu sniegšanu, kādas ir tavas prasmes, pakalpojuma nosacījumi, pieejamība u.c....'
+      ) : (
+        <FormattedMessage id="EditListingPoliciesForm.editPoliciesTip" />
+      );
 
       const { updateListingError, showListingsError } = fetchErrors || {};
       const errorMessage = updateListingError ? (
@@ -65,9 +78,7 @@ export const EditListingPoliciesFormComponent = props => (
             placeholder={rulesPlaceholderMessage}
           />
 
-          <p className={css.tip}>
-            <FormattedMessage id="EditListingPoliciesForm.editPoliciesTip" />
-          </p>
+          <p className={css.tip}>{padoms}</p>
 
           <Button
             className={css.submitButton}

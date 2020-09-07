@@ -27,6 +27,7 @@ const EditListingPoliciesPanel = props => {
   const classes = classNames(rootClassName || css.root, className);
   const currentListing = ensureOwnListing(listing);
   const { publicData } = currentListing.attributes;
+  const isAService = props.listing.attributes.publicData.category === 'pserv_main' ? true : false;
 
   const isPublished = currentListing.id && currentListing.attributes.state !== LISTING_STATE_DRAFT;
   const panelTitle = isPublished ? (
@@ -34,11 +35,21 @@ const EditListingPoliciesPanel = props => {
       id="EditListingPoliciesPanel.title"
       values={{ listingTitle: <ListingLink listing={listing} /> }}
     />
+  ) : isAService ? (
+    <React.Fragment>Pilns pakalpojuma apraksts</React.Fragment>
   ) : (
     <React.Fragment>
       <FormattedMessage id="EditListingPoliciesPanel.createListingTitle" />
     </React.Fragment>
   );
+
+  // console.log(
+  //   'panel props',
+  //   props.listing.attributes.publicData.category,
+  //   props.listing.attributes.publicData.subcategory
+  // );
+
+  isAService ? console.log('IS A SERVICEEEE!!!!') : console.log('not a service');
 
   return (
     <div className={classes}>
@@ -63,6 +74,7 @@ const EditListingPoliciesPanel = props => {
         updated={panelUpdated}
         updateInProgress={updateInProgress}
         fetchErrors={errors}
+        isAService={isAService}
       />
     </div>
   );
