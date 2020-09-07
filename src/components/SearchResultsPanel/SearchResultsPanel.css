@@ -9,7 +9,7 @@
   display: inline-grid;
   width: 100%;
   grid-template-columns: 94%;
-  grid-gap: 24px;
+  grid-gap: 2vh;
   padding: 0 36px 96px !important;
 
   @media (min-width: 620px) {

@@ -43,6 +43,8 @@ import 'moment/locale/lv';
 
 moment.locale('lv');
 
+console.clear();
+
 // If translation key is missing from `messagesInLocale` (e.g. fr.json),
 // corresponding key will be added to messages from `defaultMessages` (en.json)
 // to prevent missing translation key errors.

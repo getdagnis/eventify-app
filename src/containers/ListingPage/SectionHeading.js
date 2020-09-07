@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from '../../util/reactIntl';
-import { InlineTextButton } from '../../components';
+// import { InlineTextButton } from '../../components';
 import { LINE_ITEM_NIGHT, LINE_ITEM_DAY } from '../../util/types';
 import config from '../../config';
 import { Link } from 'react-router-dom';
@@ -15,8 +15,8 @@ const SectionHeading = props => {
     subcategory,
     subcategoryId,
     hostLink,
-    showContactUser,
-    onContactUser,
+    // showContactUser,
+    // onContactUser,
   } = props;
 
   const unitType = config.bookingUnitType;

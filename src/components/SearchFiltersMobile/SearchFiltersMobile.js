@@ -15,8 +15,8 @@ import {
   Button,
   KeywordFilter,
   PriceFilter,
-  SelectSingleFilter,
-  SelectMultipleFilter,
+  // SelectSingleFilter,
+  // SelectMultipleFilter,
   SortBy,
   BookingDateRangeFilter,
 } from '../../components';
@@ -203,11 +203,9 @@ class SearchFiltersMobileComponent extends Component {
       resultsCount,
       searchInProgress,
       showAsModalMaxWidth,
-      onMapIconClick,
       onManageDisableScrolling,
       selectedFiltersCount,
-      categoryFilter,
-      amenitiesFilter,
+      // categoryFilter,
       priceFilter,
       dateRangeFilter,
       keywordFilter,
@@ -232,39 +230,39 @@ class SearchFiltersMobileComponent extends Component {
     const filtersButtonClasses =
       selectedFiltersCount > 0 ? css.filtersButtonSelected : css.filtersButton;
 
-    const categoryLabel = intl.formatMessage({
-      id: 'SearchFiltersMobile.categoryLabel',
-    });
-    const initialCategory = categoryFilter ? this.initialValue(categoryFilter.paramName) : null;
+    // const categoryLabel = intl.formatMessage({
+    //   id: 'SearchFiltersMobile.categoryLabel',
+    // });
+    // const initialCategory = categoryFilter ? this.initialValue(categoryFilter.paramName) : null;
 
-    const categoryFilterElement = categoryFilter ? (
-      <SelectSingleFilter
-        urlParam={categoryFilter.paramName}
-        label={categoryLabel}
-        onSelect={this.handleSelectSingle}
-        liveEdit
-        options={categoryFilter.options}
-        initialValue={initialCategory}
-        intl={intl}
-      />
-    ) : null;
+    // const categoryFilterElement = categoryFilter ? (
+    //   <SelectSingleFilter
+    //     urlParam={categoryFilter.paramName}
+    //     label={categoryLabel}
+    //     onSelect={this.handleSelectSingle}
+    //     liveEdit
+    //     options={categoryFilter.options}
+    //     initialValue={initialCategory}
+    //     intl={intl}
+    //   />
+    // ) : null;
 
-    const amenitiesLabel = intl.formatMessage({ id: 'SearchFiltersMobile.amenitiesLabel' });
+    // const amenitiesLabel = intl.formatMessage({ id: 'SearchFiltersMobile.amenitiesLabel' });
 
-    const initialAmenities = this.initialValues(amenitiesFilter.paramName);
+    // const initialAmenities = this.initialValues(amenitiesFilter.paramName);
 
-    const amenitiesFilterElement = amenitiesFilter ? (
-      <SelectMultipleFilter
-        id="SearchFiltersMobile.amenitiesFilter"
-        name="amenities"
-        urlParam={amenitiesFilter.paramName}
-        label={amenitiesLabel}
-        onSubmit={this.handleSelectMultiple}
-        liveEdit
-        options={amenitiesFilter.options}
-        initialValues={initialAmenities}
-      />
-    ) : null;
+    // const amenitiesFilterElement = amenitiesFilter ? (
+    //   <SelectMultipleFilter
+    //     id="SearchFiltersMobile.amenitiesFilter"
+    //     name="amenities"
+    //     urlParam={amenitiesFilter.paramName}
+    //     label={amenitiesLabel}
+    //     onSubmit={this.handleSelectMultiple}
+    //     liveEdit
+    //     options={amenitiesFilter.options}
+    //     initialValues={initialAmenities}
+    //   />
+    // ) : null;
 
     const initialPriceRange = this.initialPriceRangeValue(priceFilter.paramName);
 

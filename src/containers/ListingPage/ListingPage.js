@@ -44,10 +44,10 @@ import { Categories as eventifyCategories } from '../../categories';
 
 import { sendEnquiry, loadData, setInitialValues } from './ListingPage.duck';
 import SectionImages from './SectionImages';
-import SectionAvatar from './SectionAvatar';
+// import SectionAvatar from './SectionAvatar';
 import SectionHeading from './SectionHeading';
 import SectionDescriptionMaybe from './SectionDescriptionMaybe';
-import SectionFeaturesMaybe from './SectionFeaturesMaybe';
+// import SectionFeaturesMaybe from './SectionFeaturesMaybe';
 import SectionReviews from './SectionReviews';
 import SectionHostMaybe from './SectionHostMaybe';
 import SectionRulesMaybe from './SectionRulesMaybe';
@@ -189,8 +189,8 @@ export class ListingPageComponent extends Component {
       sendEnquiryError,
       timeSlots,
       fetchTimeSlotsError,
-      categoriesConfig,
-      amenitiesConfig,
+      // categoriesConfig,
+      // amenitiesConfig,
     } = this.props;
 
     const listingId = new UUID(rawParams.id);
@@ -371,13 +371,13 @@ export class ListingPageComponent extends Component {
       </NamedLink>
     );
 
-    const category =
-      publicData && publicData.category ? (
-        <span>
-          {categoryLabel(eventifyCategories, publicData.category)}
-          <span className={css.separator}>•</span>
-        </span>
-      ) : null;
+    // const category =
+    //   publicData && publicData.category ? (
+    //     <span>
+    //       {categoryLabel(eventifyCategories, publicData.category)}
+    //       <span className={css.separator}>•</span>
+    //     </span>
+    //   ) : null;
 
     const subcategoryId = publicData && publicData.subcategory ? publicData.subcategory : null;
     console.log('subcategoryId', subcategoryId);

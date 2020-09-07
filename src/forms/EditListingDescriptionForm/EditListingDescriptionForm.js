@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { arrayOf, bool, func, shape, string } from 'prop-types';
 import { compose } from 'redux';
 import { Form as FinalForm } from 'react-final-form';
@@ -12,7 +12,6 @@ import CustomSubcategorySelectFieldMaybe from '../../forms/EditListingDescriptio
 import { Categories as eventifyCategories } from '../../categories';
 
 import css from './EditListingDescriptionForm.css';
-import { toLength } from 'lodash';
 
 const TITLE_MAX_LENGTH = 60;
 
@@ -21,7 +20,6 @@ const EditListingDescriptionFormComponent = props => (
     {...props}
     render={formRenderProps => {
       const {
-        categories,
         className,
         disabled,
         ready,
@@ -29,7 +27,6 @@ const EditListingDescriptionFormComponent = props => (
         intl,
         invalid,
         pristine,
-        saveActionMsg,
         updated,
         updateInProgress,
         fetchErrors,
@@ -87,12 +84,8 @@ const EditListingDescriptionFormComponent = props => (
 
       // EVENTIFY Categories & Subcategories Logic
       let selectedCategory = formRenderProps.values.category;
-      let thisCategory = eventifyCategories.find(thisCat => thisCat.id == selectedCategory);
+      let thisCategory = eventifyCategories.find(thisCat => thisCat.id === selectedCategory);
       let subcategories = thisCategory ? thisCategory.subcategories : null;
-
-      {
-        console.log(formRenderProps);
-      }
 
       return (
         <Form className={classes} onSubmit={handleSubmit}>

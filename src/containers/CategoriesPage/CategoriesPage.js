@@ -1,6 +1,4 @@
 import React from 'react';
-import config from '../../config';
-import { twitterPageURL } from '../../util/urlHelpers';
 import { StaticPage, TopbarContainer } from '../../containers';
 import {
   LayoutSingleColumn,
@@ -8,25 +6,19 @@ import {
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
-  ExternalLink,
 } from '../../components';
 import { Categories as eventifyCategories } from '../../categories';
 import { CategoryList } from './CategoryList';
-import { searchListings } from '../SearchPage/SearchPage.duck';
+// import { searchListings } from '../SearchPage/SearchPage.duck';
 
 import css from './CategoriesPage.css';
 
 const CategoriesPage = () => {
-  const { siteTwitterHandle, siteFacebookPage } = config;
-  const siteTwitterPage = twitterPageURL(siteTwitterHandle);
   const categoriesList = eventifyCategories.map(c => (
-    <category>
+    <div key={c.id} className={css.categoryBigger}>
       <CategoryList key={c.id} id={c.id} cat={c}></CategoryList>
-    </category>
+    </div>
   ));
-
-  console.log('eventifyCategories', eventifyCategories);
-  console.log('searchListings', searchListings);
 
   return (
     <StaticPage

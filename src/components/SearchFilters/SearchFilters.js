@@ -61,9 +61,9 @@ const SearchFiltersComponent = props => {
     priceFilter,
     dateRangeFilter,
     keywordFilter,
-    isSearchFiltersPanelOpen,
+    // isSearchFiltersPanelOpen,
     toggleSearchFiltersPanel,
-    searchFiltersPanelSelectedCount,
+    // searchFiltersPanelSelectedCount,
     history,
     intl,
   } = props;
@@ -159,16 +159,10 @@ const SearchFiltersComponent = props => {
       />
     ) : null;
 
-  const toggleSearchFiltersPanelButtonClasses =
-    isSearchFiltersPanelOpen || searchFiltersPanelSelectedCount > 0
-      ? css.searchFiltersPanelOpen
-      : css.searchFiltersPanelClosed;
-
   const subcategory = props.subcategory;
-  console.log('props.subcategory', subcategory);
   const kategorijuPoga = subcategory ? 'Kategorija: ' + subcategory : 'Izvēlies kategoriju';
   const isSubcategorySelected = props.subcategory ? (
-    <category-title>{props.subcategory}</category-title>
+    <div className={css.categoryTitle}>{props.subcategory}</div>
   ) : null;
 
   const toggleSearchFiltersPanelButton = toggleSearchFiltersPanel ? (

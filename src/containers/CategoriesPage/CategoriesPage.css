@@ -2,13 +2,13 @@
 
 .pageTitle {
   text-align: center;
-  margin: 1vw auto 5px !important;
+  margin: 1vw auto 5px;
   font-size: 1.3rem;
 }
 
 eventify-yellow {
-  font-weight: 700 !important;
-  color: var(--marketplaceColor) !important;
+  font-weight: 700;
+  color: var(--marketplaceColor);
 }
 
 .staticPageWrapper {
@@ -54,76 +54,80 @@ eventify-yellow {
   margin-bottom: 24px;
 }
 
-.all-categories {
-  width: 95%;
-}
-
-.categories {
+.categories,
+.categoriesBottom {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
-  grid-gap: 4vh 3vh;
+  grid-gap: 3vh;
   width: auto;
   margin: 3vh auto;
   height: auto;
 }
 
-category {
+.categoryBigger {
   display: block;
   align-items: center;
   flex-flow: nowrap;
-  padding: 1.4vh 3vh 3vh;
+  padding: 3vh 3vh 1vh;
   border-radius: 0.2vh;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: 0 0 10px 3px rgba(28, 28, 32, 0.03) !important;
+  box-shadow: 0 0 10px 3px rgba(28, 28, 32, 0.03);
   transition: all 0.5s ease;
 }
 
-category:hover {
+.categoryBigger:hover {
   transform: scale(1.06);
   transition: all 0.2s ease;
   box-shadow: 0 0 10px 3px rgba(28, 28, 32, 0.1);
 }
 
-category:active {
+.categoryBigger:active {
   transform: scale(1);
   transition: all 0.2s ease;
   box-shadow: 0 0 15px 5px rgba(28, 28, 32, 0.1);
 }
 
-h3 .categoryTitle {
-  display: block;
-  width: 100%;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #4a4a4a;
-}
-
-li,
-.subcategories {
-  color: #999;
-  font-weight: 400;
-  font-size: 0.9rem !important;
-}
-
-ul {
+.listSmaller,
+.listBigger {
   list-style: none;
-  margin: 0;
+  margin: 1vh 0 2vh;
   padding: 0;
 }
 
-subcategory {
-  font-family: 'Open Sans' !important;
-  font-weight: 600 !important;
-  color: #3b3b3b !important;
-  font-size: 0.9rem !important;
-  line-height: 1.3 !important;
+.titleSmaller {
+  font-size: 0.9rem;
 }
 
-a:hover,
-subcategory:hover {
+.subcategory,
+.subcategorySmaller {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  color: #3b3b3b;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.subcategorySmaller {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.subcategory:hover,
+.subcategorySmaller:hover {
+  color: var(--marketplaceColorDark);
+}
+
+.subcategoriesLink:hover {
   text-decoration: none !important;
-  color: var(--marketplaceColorDark) !important;
+  color: var(--marketplaceColorDark);
+}
+
+.count,
+.countSmaller {
+  color: #888 !important;
+  font-size: 0.7rem !important;
+  margin-left: 3px !important;
 }
 
 @media (min-width: 1260px) {

@@ -54,13 +54,7 @@ export class SearchPageComponent extends Component {
   }
 
   filters() {
-    const {
-      categories,
-      amenities,
-      priceFilterConfig,
-      dateRangeFilterConfig,
-      keywordFilterConfig,
-    } = this.props;
+    const { priceFilterConfig, dateRangeFilterConfig, keywordFilterConfig } = this.props;
 
     // Note: "category" and "amenities" filters are not actually filtering anything by default.
     // Currently, if you want to use them, we need to manually configure them to be available
@@ -75,10 +69,6 @@ export class SearchPageComponent extends Component {
       subcategoryFilter: {
         paramName: 'pub_subcategory',
         options: eventifyCategories,
-      },
-      amenitiesFilter: {
-        paramName: 'pub_amenities',
-        options: amenities,
       },
       priceFilter: {
         paramName: 'price',
@@ -182,8 +172,8 @@ export class SearchPageComponent extends Component {
 
     const validQueryParams = validURLParamsForExtendedData(searchInURL, filters);
 
-    const isWindowDefined = typeof window !== 'undefined';
-    const isMobileLayout = isWindowDefined && window.innerWidth < MODAL_BREAKPOINT;
+    // const isWindowDefined = typeof window !== 'undefined';
+    // const isMobileLayout = isWindowDefined && window.innerWidth < MODAL_BREAKPOINT;
     const shouldShowSearchMap = false;
     // !isMobileLayout || (isMobileLayout && this.state.isSearchMapOpenOnMobile);
 
@@ -215,25 +205,30 @@ export class SearchPageComponent extends Component {
       searchParams && searchParams.pub_subcategory
         ? searchParams.pub_subcategory.slice(0, 3)
         : null;
-    console.log('category first letters:', categoryIdBeginsWith);
+    // console.log('category first letters:', categoryIdBeginsWith);
     const subcats = categoryIdBeginsWith
       ? eventifyCategories.find(c => c.id.slice(0, 3) === categoryIdBeginsWith).subcategories
       : null;
 
-    subcats ? console.log('subcats', subcats) : console.log('no subcats');
+    // subcats ? console.log('subcats', subcats) : console.log('no subcats');
 
     const subcategoryName = subcats
       ? subcats.find(s => s.id === searchParams.pub_subcategory).name
       : null;
 
-    subcategoryName
-      ? console.log('subcategoryName', subcategoryName)
-      : console.log('no subcategory name');
+    // subcategoryName
+    //   ? console.log('subcategoryName', subcategoryName)
+    //   : console.log('no subcategory name');
+
+    // const toggleCategoriesPanelButtonClasses =
+    //   isSearchFiltersPanelOpen || searchFiltersPanelSelectedCount > 0
+    //     ? css.searchFiltersPanelOpen
+    //     : css.searchFiltersPanelClosed;
 
     const categoriesList = eventifyCategories.map(category => (
-      <category>
-        <CategoryList key={category.id} id={category.id} cat={category}></CategoryList>
-      </category>
+      <div key={category.id} className={css.categorySmaller}>
+        <CategoryList id={category.id} cat={category} isSmaller={true}></CategoryList>
+      </div>
     ));
 
     // N.B. openMobileMap button is sticky.
@@ -273,10 +268,12 @@ export class SearchPageComponent extends Component {
               dateRangeFilter: filters.dateRangeFilter,
               keywordFilter: filters.keywordFilter,
             }}
-            secondaryFilters={{
-              categoryFilter: filters.categoryFilter,
-              amenitiesFilter: filters.amenitiesFilter,
-            }}
+            secondaryFilters={
+              {
+                // categoryFilter: filters.categoryFilter,
+                // amenitiesFilter: filters.amenitiesFilter,
+              }
+            }
           />
           <ModalInMobile
             className={css.mapPanel}
@@ -305,10 +302,10 @@ export class SearchPageComponent extends Component {
               ) : null}
             </div>
           </ModalInMobile>
-          <search-h2>
+          <div className={css.searchCatsTitle}>
             Visas <eventify-yellow>eventify</eventify-yellow> kategorijas
-          </search-h2>
-          <div className={css.categories}>{categoriesList}</div>
+          </div>
+          <div className={css.categoriesBottom}>{categoriesList}</div>
         </div>
       </Page>
     );

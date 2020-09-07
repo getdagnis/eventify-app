@@ -1,15 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import css from './CategoriesPage.css';
 
 export const Subcategory = props => {
-  const myId = props.id;
+  const { myId, isSmaller } = props;
   const subcatLink = 's?pub_subcategory=' + props.id;
 
-  return (
-    <Link id={myId} to={subcatLink}>
-      <li key={myId} className="subcategories">
-        <subcategory>{props.name}</subcategory> (
-        {Math.random(0, 10) * 10 > 8 ? 0 : Math.floor(Math.random(0, 100) * 40)})
+  return !isSmaller ? (
+    <Link key={myId} id={myId} to={subcatLink} className={css.subcategoriesLink}>
+      <li key={myId} className={css.subcategory}>
+        {props.name}
+        <span className={css.count}>
+          {''}({Math.random(0, 10) * 10 > 8 ? 0 : Math.floor(Math.random(0, 100) * 40)})
+        </span>
+      </li>
+    </Link>
+  ) : (
+    <Link key={myId} id={myId} to={subcatLink} className={css.subcategoriesLink}>
+      <li key={myId} className={css.subcategorySmaller}>
+        {props.name}
+        <span className={css.countSmaller}>
+          {''}({Math.random(0, 10) * 10 > 8 ? 0 : Math.floor(Math.random(0, 100) * 40)})
+        </span>
       </li>
     </Link>
   );

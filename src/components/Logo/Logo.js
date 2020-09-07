@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import config from '../../config';
-import IconLogo from './IconLogo';
+// import IconLogo from './IconLogo';
 import LogoImage from './eventify-logo.svg';
 import css from './Logo.css';
 

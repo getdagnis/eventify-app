@@ -1,18 +1,19 @@
 import React from 'react';
-import './CategoriesPage.css';
+import css from './CategoriesPage.css';
 import { Subcategory } from './Subcategory';
 
 export const CategoryList = props => {
-  const category = props.cat;
-  const subcategories = category.subcategories;
-  console.log('categorylist props', props);
+  const { cat, isSmaller } = props;
+  const subcategories = cat.subcategories;
+  const titleClass = isSmaller ? css.titleSmaller : css.titleBigger;
+  const listClass = isSmaller ? css.listSmaller : css.listBigger;
 
   return (
     <React.Fragment>
-      <h3 className="categoryTitle">{category.name}</h3>
-      <ul>
-        {subcategories.map(subcategory => (
-          <Subcategory id={subcategory.id} name={subcategory.name} />
+      <div className={titleClass}>{cat.name}</div>
+      <ul className={listClass}>
+        {subcategories.map(s => (
+          <Subcategory key={s.id} id={s.id} name={s.name} isSmaller={isSmaller} />
         ))}
       </ul>
     </React.Fragment>

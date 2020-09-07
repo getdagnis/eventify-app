@@ -27,9 +27,9 @@ const callLoadData = props => {
 
   if (shouldLoadData) {
     dispatch(loadData(match.params, location.search))
-      .then(() => {
+      .then(r => {
         // eslint-disable-next-line no-console
-        console.log(`loadData success for ${name} route`);
+        console.log(`loadData success for ${name} route`, r);
       })
       .catch(e => {
         log.error(e, 'load-data-failed', { routeName: name });
@@ -187,7 +187,4 @@ const mapStateToProps = state => {
 // lifecycle hook.
 //
 // See: https://github.com/ReactTraining/react-router/issues/4671
-export default compose(
-  withRouter,
-  connect(mapStateToProps)
-)(Routes);
+export default compose(withRouter, connect(mapStateToProps))(Routes);
