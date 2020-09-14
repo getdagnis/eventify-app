@@ -27,7 +27,7 @@ export class CategoriesPageComponent extends Component {
   ));
 
   render() {
-    console.log('LAIMA', this.props);
+    console.log('CategoriesPage.props:', this.props);
     return (
       <StaticPage
         title="Visas eventify kategorijas"
