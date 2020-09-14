@@ -1,0 +1,47 @@
+.smallDarkBtn {
+  display: flex;
+  background-color: rgb(255, 196, 0);
+  font-family: 'Open Sans' !important;
+  border: none;
+  border-radius: 2px;
+  padding: 1vh 2vh;
+  transition: all 0.2s ease;
+  color: black;
+  cursor: pointer;
+  margin: 3vh auto;
+  outline: none;
+  font-size: 1rem;
+}
+
+.smallDarkBtn:hover {
+  padding: 1vh 3vh;
+  background-color: rgb(255, 196, 0);
+  color: black;
+  transition-duration: 0.2s;
+}
+
+.smallDarkBtn:active {
+  background-color: rgb(255, 241, 194);
+  transition-duration: 0s;
+}
+
+.smallDarkBtn:hover {
+  background-color: #da4500 !important;
+  padding: 1vh 3vh;
+}
+
+.smallDarkBtn {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: rgb(58, 58, 70);
+}
+
+.smallDarkBtn:hover {
+  color: white;
+  background-color: rgb(84, 84, 97);
+}
+
+.smallDarkBtn:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 187, 0);
+  transition-duration: 0s;
+}

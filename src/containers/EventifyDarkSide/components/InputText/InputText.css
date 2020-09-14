@@ -1,0 +1,38 @@
+.darkInputText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 49vw;
+  max-width: 695px;
+  min-height: 7vh;
+  padding: 20px;
+  margin: 3vh auto;
+  box-sizing: border-box;
+  font-size: calc(10px + 0.5vw);
+  color: white;
+  background-color: rgba(56, 56, 56, 0.2);
+  border-radius: 0.5vh;
+  border: none;
+  outline: none;
+}
+
+.darkInputText:focus {
+  background-color: rgba(97, 97, 97, 0.2);
+}
+
+.darkInputLast {
+  margin-bottom: -1vh;
+}
+
+.darkInputCenter {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .darkInputText {
+    font-size: calc(10px + 1vmin);
+    width: 50vw;
+    padding: 4px 0 4px 20px;
+    margin: 0;
+  }
+}

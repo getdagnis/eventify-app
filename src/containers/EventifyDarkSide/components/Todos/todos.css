@@ -1,0 +1,30 @@
+.darkTodo {
+  display: flex;
+  width: 50vw;
+  max-width: 700px;
+  min-height: 7vh;
+  padding: 20px;
+  margin: 2vh auto;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  background: rgb(40, 42, 49);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(28, 28, 32, 0);
+  transition: all 0.5s ease;
+}
+
+.darkTodo:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+  background: rgb(48, 50, 58);
+  box-shadow: 0 0 10px 2px rgba(28, 28, 32, 0.5);
+  cursor: pointer;
+}
+
+.darkTodo:active {
+  transform: scale(1);
+  transition: all 0.2s ease;
+  box-shadow: 0 0 15px 5px rgba(28, 28, 32, 0.8);
+  background: rgb(53, 55, 65);
+}

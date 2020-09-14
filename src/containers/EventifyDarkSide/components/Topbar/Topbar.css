@@ -1,0 +1,51 @@
+.darkTopbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(33, 33, 37, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6vh;
+  margin: 0;
+  padding: 2vh 2vh;
+  font-weight: 500;
+  font-size: calc(8px + 1vh);
+  z-index: 2;
+}
+
+.darkTopLeft {
+  flex-basis: content;
+  padding: 0;
+  margin: 0;
+}
+
+.darkTopCenter {
+  width: 50%;
+}
+
+.darkTopRight {
+  flex: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 5vw;
+}
+
+@media (max-width: 780px) {
+  .darkTopCenter {
+    flex: grow;
+  }
+  .darkTopRight {
+    display: block;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .darkTopRight {
+    margin-right: 5vw;
+  }
+}

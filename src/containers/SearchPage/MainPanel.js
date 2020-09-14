@@ -124,6 +124,9 @@ class MainPanel extends Component {
               [css.newSearchInProgress]: !listingsAreLoaded,
             })}
           >
+            {
+              // <div className={css.searchCatsTitle}>Premium piedāvājumi</div>
+            }
             {searchListingsError ? (
               <h2 className={css.error}>
                 <FormattedMessage id="SearchPage.searchError" />

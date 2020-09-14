@@ -87,6 +87,8 @@ const EditListingDescriptionFormComponent = props => (
       let thisCategory = eventifyCategories.find(thisCat => thisCat.id === selectedCategory);
       let subcategories = thisCategory ? thisCategory.subcategories : null;
 
+      console.log(props);
+
       return (
         <Form className={classes} onSubmit={handleSubmit}>
           {errorMessageCreateListingDraft}

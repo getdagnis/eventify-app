@@ -111,13 +111,13 @@ const Footer = props => {
             <div className={css.searches}>
               <ul className={css.list}>
                 <li className={css.listItem}>
-                  <NamedLink name="NewListingPage" className={css.link}>
-                    <strong>+ Pievieno sludinājumu</strong>
+                  <NamedLink name="NewListingPage" className={css.strongLink}>
+                    + Pievieno sludinājumu
                   </NamedLink>
                 </li>
                 <li className={css.listItem}>
-                  <NamedLink name="CategoriesPage" className={css.link}>
-                    <strong>Visas kategorijas</strong>
+                  <NamedLink name="CategoriesPage" className={css.strongLink}>
+                    Visas kategorijas
                   </NamedLink>
                 </li>
               </ul>

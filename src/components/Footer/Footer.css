@@ -173,7 +173,8 @@
   }
 }
 
-.link {
+.link,
+.strongLink {
   /* Font */
   @apply --marketplaceH4FontStyles;
   line-height: 20px;
@@ -192,6 +193,21 @@
     margin-top: 0;
     margin-bottom: 0;
   }
+}
+
+.strongLink {
+  display: block;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+  color: var(--marketplaceColor);
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.strongLink:hover {
+  color: var(--marketplaceColorDark);
 }
 
 /* Desktop and Mobile: searches - first column */
