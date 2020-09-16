@@ -124,10 +124,18 @@ eventify-yellow {
 }
 
 .count,
-.countSmaller {
-  color: #888 !important;
+.countSmaller,
+.countYellow,
+.countSmallerYellow {
+  color: #aaa !important;
   font-size: 0.7rem !important;
   margin-left: 3px !important;
+}
+
+.countYellow,
+.countSmallerYellow {
+  color: var(--marketplaceColor) !important;
+  font-weight: 700 !important;
 }
 
 @media (min-width: 1260px) {

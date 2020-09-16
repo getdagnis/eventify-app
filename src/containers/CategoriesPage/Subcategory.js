@@ -10,16 +10,14 @@ export const Subcategory = props => {
     <Link key={myId} to={subcatLink} className={css.subcategoriesLink}>
       <li key={myId} className={css.subcategory}>
         {props.name}
-        <span className={css.count}>
-          {''}({Math.random(0, 10) * 10 > 8 ? 0 : Math.floor(Math.random(0, 100) * 40)})
-        </span>
+        <span className={count > 0 ? css.countYellow : css.count}>({count})</span>
       </li>
     </Link>
   ) : (
     <Link key={myId} to={subcatLink} className={css.subcategoriesLink}>
       <li key={myId} className={css.subcategorySmaller}>
         {props.name}
-        <span className={css.countSmaller}>({count})</span>
+        <span className={count > 0 ? css.countSmallerYellow : css.countSmaller}>({count})</span>
       </li>
     </Link>
   );

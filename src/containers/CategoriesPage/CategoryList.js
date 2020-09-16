@@ -2,7 +2,13 @@ import React from 'react';
 import css from './CategoriesPage.css';
 import { Subcategory } from './Subcategory';
 
-export const CategoryList = props => {
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { searchListings } from '../SearchPage/SearchPage.duck';
+import * as SearchPage from '../SearchPage/SearchPage';
+
+const CategoryListComponent = props => {
   const { cat, isSmaller } = props;
   const subcategories = cat.subcategories;
   const titleClass = isSmaller ? css.titleSmaller : css.titleBigger;
@@ -14,6 +20,9 @@ export const CategoryList = props => {
     const suchListings = allListings.filter(l => l.attributes.publicData.subcategory === k);
     return suchListings ? suchListings.length : 'listings count not known';
   };
+
+  console.log('categorylist props:', props.listings);
+  console.log(props);
 
   return (
     <React.Fragment>
@@ -32,3 +41,21 @@ export const CategoryList = props => {
     </React.Fragment>
   );
 };
+
+CategoryListComponent.defaultProps = {
+  listings: [],
+};
+
+export const CategoryList = compose(
+  withRouter,
+  connect(SearchPage.mapStateToProps, SearchPage.mapDispatchToProps)
+)(CategoryListComponent);
+
+CategoryList.loadData = (params, search) => {
+  return searchListings({
+    include: [],
+    'fields.listing': ['title', 'price', 'publicData', 'premium'],
+  });
+};
+
+export default CategoryList;

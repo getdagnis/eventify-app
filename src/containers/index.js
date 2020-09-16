@@ -1,5 +1,6 @@
 export { default as AboutPage } from './AboutPage/AboutPage';
-export { default as AuthenticationPage } from './AuthenticationPage/AuthenticationPage';
+export { default as AuthenticationPage } from './AuthenticationPage/AuthenticationPage'
+export { default as CategoryList } from './CategoriesPage/CategoryList';
 export { default as CategoriesPage } from './CategoriesPage/CategoriesPage';
 export { default as CheckoutPage } from './CheckoutPage/CheckoutPage';
 export { default as ContactDetailsPage } from './ContactDetailsPage/ContactDetailsPage';

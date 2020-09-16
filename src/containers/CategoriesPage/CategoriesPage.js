@@ -8,8 +8,10 @@ import {
   Footer,
 } from '../../components';
 import { compose } from 'redux';
+import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { searchListings } from '../SearchPage/SearchPage.duck';
+import * as SearchPage from '../SearchPage/SearchPage';
 
 import { Categories as eventifyCategories } from '../../categories';
 import { CategoryList } from './CategoryList';
@@ -63,7 +65,10 @@ CategoriesPageComponent.defaultProps = {
   listings: [],
 };
 
-const CategoriesPage = compose(withRouter)(CategoriesPageComponent);
+const CategoriesPage = compose(
+  withRouter,
+  connect(SearchPage.mapStateToProps, SearchPage.mapDispatchToProps)
+)(CategoriesPageComponent);
 
 CategoriesPage.loadData = (params, search) => {
   return searchListings({

@@ -139,6 +139,8 @@ export class SearchPageComponent extends Component {
   }
 
   render() {
+    console.log('SearchPage.props:', this.props);
+
     const {
       intl,
       listings,
@@ -227,12 +229,7 @@ export class SearchPageComponent extends Component {
 
     const categoriesList = eventifyCategories.map(category => (
       <div key={category.id} className={css.categorySmaller}>
-        <CategoryList
-          id={category.id}
-          cat={category}
-          isSmaller={true}
-          listings={this.props.listings}
-        ></CategoryList>
+        <CategoryList id={category.id} cat={category} isSmaller={true}></CategoryList>
       </div>
     ));
 
@@ -366,7 +363,7 @@ SearchPageComponent.propTypes = {
   intl: intlShape.isRequired,
 };
 
-const mapStateToProps = state => {
+export const mapStateToProps = state => {
   const {
     currentPageResultIds,
     pagination,
@@ -394,7 +391,7 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   onManageDisableScrolling: (componentId, disableScrolling) =>
     dispatch(manageDisableScrolling(componentId, disableScrolling)),
   onSearchMapListings: searchParams => dispatch(searchMapListings(searchParams)),

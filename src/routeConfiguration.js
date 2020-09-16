@@ -26,6 +26,7 @@ import {
   TermsOfServicePage,
   TransactionPage,
 } from './containers';
+import { CategoryList } from './containers/CategoriesPage/CategoryList';
 
 // routeConfiguration needs to initialize containers first
 // Otherwise, components will import form container eventually and
@@ -76,6 +77,12 @@ const routeConfiguration = () => {
       name: 'CategoriesPage',
       component: props => <CategoriesPage {...props} />,
       loadData: CategoriesPage.loadData,
+    },
+    {
+      path: '/kategorijas/list',
+      name: 'CategoryList',
+      component: props => <CategoryList {...props} />,
+      loadData: CategoryList.loadData,
     },
     {
       path: '/s',
